@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sharifulislamghuddy.com/sitemap.xml
