@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shariful Islam Ghuddy — Music Composer & Sound Engineer | শরীফুল ইসলাম ঘুড্ডি</title>
+<title>Shariful Islam Ghuddy — Music Composer & Sound Engineer</title>
 <meta name="description" content="Official website of Shariful Islam Ghuddy (Sharif Sumon), Bangladeshi music composer, sound engineer and mix & mastering engineer. Founding member of the band Ghuddy and founder of Sound Hacker, Dhaka.">
 <link rel="canonical" href="https://sharifulislamghuddy.com/">
 <meta property="og:type" content="profile">
@@ -275,6 +275,28 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 .hx .gbadge:hover{border-color:var(--gold);text-decoration:none}
 .hx .gbadge b{color:var(--gold)}
 @media(max-width:900px){.gw .in{grid-template-columns:1fr}}
+
+/* mumbai voice sessions */
+#mumbai{padding:110px 0;border:0;background:linear-gradient(180deg,#0b0a09,#120e14 50%,#0b0a09)}
+#mumbai .in{max-width:1200px;margin:0 auto;padding:0 24px}
+#mumbai .k{color:var(--gold)}
+#mumbai h3{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,44px);color:var(--ink);margin:14px 0 46px;max-width:760px;line-height:1.15}
+#mumbai h3 i{color:var(--gold)}
+.voices{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #3a2f3d;border-bottom:1px solid #3a2f3d}
+.voice{position:relative;padding:34px 22px 30px;border-right:1px solid #3a2f3d;transition:background .4s}
+.voice:last-child{border-right:0}
+.voice:hover{background:radial-gradient(ellipse at 50% 100%,rgba(224,165,74,.16),transparent 70%)}
+.voice .no{color:#7d7266}
+.voice b{display:block;font-family:Fraunces,Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(28px,2.6vw,40px);line-height:1.05;color:var(--ink);margin:18px 0 14px}
+.voice .meter{display:flex;gap:3px;align-items:flex-end;height:26px}
+.voice .meter i{flex:1;max-width:6px;background:linear-gradient(0deg,#6f8f3a,var(--gold) 70%,var(--ember));opacity:.35;border-radius:1px;transition:opacity .3s}
+.voice:hover .meter i{opacity:1;animation:vu .6s ease-in-out infinite alternate}
+.voice .meter i:nth-child(2n){animation-delay:.15s}.voice .meter i:nth-child(3n){animation-delay:.3s}
+@keyframes vu{from{transform:scaleY(.4)}to{transform:scaleY(1)}}
+.voice .meter i{transform-origin:bottom}
+#mumbai .note2{margin-top:26px;color:var(--muted);font-size:15px;max-width:720px}
+.gallery .g.wide{grid-column:1/-1;aspect-ratio:21/9}
+@media(max-width:900px){.voices{grid-template-columns:1fr 1fr}.voice:nth-child(2){border-right:0}.voice:nth-child(-n+2){border-bottom:1px solid #3a2f3d}}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -297,7 +319,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 
 <nav id="topnav">
   <a class="logo" href="#top"><svg viewBox="0 0 30 42" fill="none" stroke="#e0a54a" stroke-width="1.6"><path d="M15 1 L28 14 L15 27 L2 14 Z"/><path d="M15 1 V27 M2 14 H28"/><path d="M15 27 C 11 31, 19 34, 15 38 S 12 41, 14 42"/></svg>GHUDDY</a>
-  <div class="links"><a href="#notes">Story</a><a href="#works">Works</a><a href="#ghuddy">Band & Studio</a><a href="#gallery">Gallery</a><a href="#press">Press</a><a href="#bangla">বাংলা</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#notes">Story</a><a href="#works">Works</a><a href="#ghuddy">Band & Studio</a><a href="#gallery">Gallery</a><a href="#press">Press</a><a href="#contact">Contact</a></div>
 </nav>
 
 <header class="hx" id="top">
@@ -309,7 +331,6 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
   <div class="grain"></div>
   <div class="title">
     <h1 class="name">Shariful Islam Ghuddy</h1>
-    <div class="name-bn bn">শরীফুল ইসলাম ঘুড্ডি</div>
     <p class="mantra"><span class="l1">Music is my <em>soul.</em></span><span class="l2">Riding is my <em>peace.</em></span></p>
     <div class="roles2 mono">Music composer · Sound engineer · Producer · Rider</div>
     <a class="gbadge" href="#guinness">🏆 <span>Jingle for a <b>Guinness World Records</b> campaign · 2025</span></a>
@@ -327,8 +348,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
     <h2><small>Liner notes</small>The story so far</h2>
     <div class="grid">
       <div>
-        <p class="big">I don't fall in love easily. But when I do — with a person, a song, or a <i>road</i> — I give it everything.
-          <span class="bn">আমি সহজে কাউকে ভালোবাসতে পারি না। কিন্তু যাকে ভালোবাসি, তার জন্য সবকিছু করতে রাজি।</span></p>
+        <p class="big">I don't fall in love easily. But when I do — with a person, a song, or a <i>road</i> — I give it everything.</p>
         <div class="sig"><img src="photo.jpg" alt="Shariful Islam Ghuddy" width="74" height="74"><p><b style="color:var(--ink)">Shariful Islam Ghuddy</b> · also credited as Sharif Sumon<br>Composer, arranger &amp; mix engineer · Founder, Sound Hacker, Dhaka</p></div>
         <div class="links2">
           <a href="https://www.youtube.com/@Sharifulislamghuddy" rel="me">YouTube</a>
@@ -343,12 +363,13 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
       <div class="tracklist">
         <div class="sh mono"><span>Side A — The Sound</span><span>Year</span></div>
         <div class="tr"><span class="n mono">01</span><div><h4>The band is born</h4><p>Co-founds Ghuddy — guitar &amp; flute</p></div><span class="y">2007</span></div>
-        <div class="tr"><span class="n mono">02</span><div><h4>On air</h4><p>Joins Colours FM 101.6 as audio engineer</p></div><span class="y">2015</span></div>
-        <div class="tr"><span class="n mono">03</span><div><h4>Mumbai sessions</h4><p>Mumbai Music Institute · Steinberg certified · plays with Reeva</p></div><span class="y">2016</span></div>
-        <div class="tr"><span class="n mono">04</span><div><h4>Sound Hacker opens</h4><p>Studio &amp; production house, Kakrail, Dhaka</p></div><span class="y">2018</span></div>
-        <div class="tr"><span class="n mono">05</span><div><h4>Manchitro</h4><p>Ghuddy's album <em>Manchitro (147570 Square Kilometers)</em></p></div><span class="y">2019</span></div>
-        <div class="tr"><span class="n mono">06</span><div><h4>Porcelaina — Tahsan's Playlist</h4><p>7 songs · arrangement, mixing &amp; mastering</p></div><span class="y">2025</span></div>
-        <div class="tr"><span class="n mono">07</span><div><h4>Domm</h4><p>"Kothay Pabo Tahare" · arrangement, mix &amp; master</p></div><span class="y">2026</span></div>
+        <div class="tr"><span class="n mono">02</span><div><h4>First time on air</h4><p>Radio Bhumi 92.8 FM</p></div><span class="y">2012</span></div>
+        <div class="tr"><span class="n mono">03</span><div><h4>On air</h4><p>Joins Colours FM 101.6 as audio engineer</p></div><span class="y">2015</span></div>
+        <div class="tr"><span class="n mono">04</span><div><h4>Mumbai sessions</h4><p>Mumbai Music Institute · Steinberg certified · voice sessions with Shreya Ghoshal, Sukhwinder Singh, Monali Thakur &amp; Nakash Aziz</p></div><span class="y">2016</span></div>
+        <div class="tr"><span class="n mono">05</span><div><h4>Sound Hacker opens</h4><p>Studio &amp; production house, Kakrail, Dhaka</p></div><span class="y">2018</span></div>
+        <div class="tr"><span class="n mono">06</span><div><h4>Manchitro</h4><p>Ghuddy's album <em>Manchitro (147570 Square Kilometers)</em></p></div><span class="y">2019</span></div>
+        <div class="tr"><span class="n mono">07</span><div><h4>Porcelaina — Tahsan's Playlist</h4><p>7 songs · arrangement, mixing &amp; mastering</p></div><span class="y">2025</span></div>
+        <div class="tr"><span class="n mono">08</span><div><h4>Domm</h4><p>"Kothay Pabo Tahare" · arrangement, mix &amp; master</p></div><span class="y">2026</span></div>
         <div class="sh mono" style="margin-top:26px"><span>Side B — The Road</span><span>∞</span></div>
         <div class="tr"><span class="n mono">01</span><div><h4>Forests, coastlines, hill roads</h4><p>Bike rider &amp; traveler — where the next melody usually starts</p></div><span class="y">ADV</span></div>
       </div>
@@ -369,11 +390,20 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
   </div></div>
 </section>
 
+<section id="mumbai">
+  <div class="in">
+    <div class="k mono">Voice sessions · Mumbai, India</div>
+    <h3>In the studio with some of <i>India's finest voices</i>.</h3>
+    <div class="voices"><div class="voice"><span class="no mono">Session 01</span><b>Shreya<br>Ghoshal</b><div class="meter"><i style="height:40%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:65%"></i><i style="height:35%"></i></div></div><div class="voice"><span class="no mono">Session 02</span><b>Sukhwinder<br>Singh</b><div class="meter"><i style="height:60%"></i><i style="height:95%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:70%"></i></div></div><div class="voice"><span class="no mono">Session 03</span><b>Monali<br>Thakur</b><div class="meter"><i style="height:35%"></i><i style="height:60%"></i><i style="height:85%"></i><i style="height:70%"></i><i style="height:95%"></i><i style="height:55%"></i><i style="height:75%"></i><i style="height:40%"></i></div></div><div class="voice"><span class="no mono">Session 04</span><b>Nakash<br>Aziz</b><div class="meter"><i style="height:55%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:100%"></i><i style="height:75%"></i><i style="height:45%"></i><i style="height:90%"></i><i style="height:60%"></i></div></div></div>
+    <p class="note2">While in Mumbai, Shariful Islam Ghuddy worked on vocal recording sessions with these celebrated Indian playback singers.</p>
+  </div>
+</section>
+
 <section id="about">
   <div class="wrap">
     <h2><small>About</small>Biography</h2>
     <p><strong>Shariful Islam Ghuddy</strong> — also credited as <strong>Sharif Sumon</strong> — is a Bangladeshi music composer, sound engineer, mix & mastering engineer and sound designer based in Dhaka. He is a founding member of the band <strong>Ghuddy</strong>, formed in 2007, where he plays guitar and flute. The band's name has since become part of his own, and he is widely known as "Ghuddy".</p>
-    <p>In 2015 he joined the radio station Colours FM 101.6 as an audio engineer, and in 2016 he advanced his studio-engineering training in Mumbai, studying sound engineering at <strong>Mumbai Music Institute</strong> and earning a professional certification from <strong>Steinberg</strong>. While in India he also performed as rhythm guitarist with the Indian band Reeva.</p>
+    <p>In 2012 he began working in radio at <strong>Radio Bhumi 92.8 FM</strong>, and in 2015 he joined the radio station Colours FM 101.6 as an audio engineer; and in 2016 he advanced his studio-engineering training in Mumbai, studying sound engineering at <strong>Mumbai Music Institute</strong> and earning a professional certification from <strong>Steinberg</strong>. While in India he also performed as rhythm guitarist with the Indian band Reeva.</p>
     <p>In 2018 he founded <strong>Sound Hacker</strong>, an audio production house and recording studio in Kakrail, Dhaka, where he works as composer, arranger and mix & mastering engineer alongside long-time collaborator Rizvi Rahman Adit. His work spans feature films, short films, television dramas, artist releases, jingles and advertising, NGO campaigns and dubbing — including music arrangement, mixing and mastering for Redoan Rony's feature film <em>Domm</em> (2026) and for seven songs of Tahsan Khan's <em>Porcelaina Tahsan's Playlist</em> (2025), among them "Prakritik", Tahsan's final released song.</p>
     <p>Outside the studio, he is a passionate bike rider and traveler who loves exploring new places.</p>
     <div class="facts">
@@ -389,16 +419,16 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
   <div class="wrap">
     <h2><small>Selected records</small>Hover a sleeve — the record slides out</h2>
     <div class="shelf">
-      <a class="rec sig" href="https://www.youtube.com/watch?v=tT00vnqlZRA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/tT00vnqlZRA/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 01 · Film · 2026</span><div><h3>Kothay Pabo Tahare</h3><p>Domm — dir. Redoan Rony<br>Arrangement · mix &amp; master</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=_ivJlmSfdBk" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/_ivJlmSfdBk/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 02 · Album · 2025</span><div><h3>Porcelaina</h3><p>Tahsan Khan — incl. Prematal, Prakritik<br>Arrangement · mix &amp; master</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=LedapTiMZMM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/LedapTiMZMM/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 03 · Drama · 2025</span><div><h3>Kajol Chokhe Valobasha</h3><p>Mahtim Shakib<br>Composer</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=sl1DxUs-OfM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/sl1DxUs-OfM/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 04 · Short film · 2025</span><div><h3>Ek Guccho Kadam</h3><p>Closeup Kache Ashar Golpo<br>Background score</p></div></div></a>
+      <a class="rec sig" href="https://www.youtube.com/watch?v=tT00vnqlZRA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/tT00vnqlZRA/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 01 · Film · 2026</span><div><h3>Kothay Pabo Tahare</h3><p>Domm — dir. Redoan Rony<br>Arrangement · mix &amp; master</p></div></div></a>
+      <a class="rec " href="https://www.youtube.com/watch?v=_ivJlmSfdBk" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/_ivJlmSfdBk/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 02 · Album · 2025</span><div><h3>Porcelaina</h3><p>Tahsan Khan — incl. Prematal, Prakritik<br>Arrangement · mix &amp; master</p></div></div></a>
+      <a class="rec " href="https://www.youtube.com/watch?v=LedapTiMZMM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/LedapTiMZMM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 03 · Drama · 2025</span><div><h3>Kajol Chokhe Valobasha</h3><p>Mahtim Shakib<br>Composer</p></div></div></a>
+      <a class="rec " href="https://www.youtube.com/watch?v=sl1DxUs-OfM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/sl1DxUs-OfM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 04 · Short film · 2025</span><div><h3>Ek Guccho Kadam</h3><p>Closeup Kache Ashar Golpo<br>Background score</p></div></div></a>
       <a class="rec " href="https://music.apple.com/us/artist/ghuddy/689244959" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(gallery-studio-5.jpg)"></div><span class="play">▶</span><span class="no mono">No. 05 · Band · 2019</span><div><h3>Sharoni 71</h3><p>Ghuddy — Manchitro<br>MTV Chart Attack</p></div></div></a>
       <a class="rec " href="https://www.guinnessworldrecords.com/world-records/586293-most-people-in-an-online-video-chain-passing-a-football" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(gallery-studio-4.jpg)"></div><span class="play">▶</span><span class="no mono">No. 06 · Jingle · 2025</span><div><h3>Pass Koro, Record Goro</h3><p>Clear Men — Guinness World Records campaign<br>Jingle music</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=aQSzM4uX22A" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/aQSzM4uX22A/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 07 · Cover · 2018</span><div><h3>Adho Raat</h3><p>Mahtim Shakib — Talat Mahmood cover<br>Music producer · Sound Hacker</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=A3vteLASpHA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/A3vteLASpHA/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 08 · Cover · 2018</span><div><h3>Ekhon To Somoy Bhalobashar</h3><p>Mahtim &amp; Dimple — Colours FM 101.6<br>Music producer</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=6riDQha4A4Q" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/6riDQha4A4Q/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 09 · Band · 2019</span><div><h3>Jongla Phul</h3><p>F Minor<br>Music producer</p></div></div></a>
-      <a class="rec sig" href="https://www.youtube.com/watch?v=1Xt1w08hTgM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/1Xt1w08hTgM/hqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 10 · Flute rock · 2026</span><span class="tag mono">Soul + peace</span><div><h3>Biker's Paradise</h3><p>Game of Thrones — epic flute rock cover<br>Flute · music producer · Sound Hacker</p></div></div></a>
+      <a class="rec " href="https://www.youtube.com/watch?v=aQSzM4uX22A" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/aQSzM4uX22A/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 07 · Cover · 2018</span><div><h3>Adho Raat</h3><p>Mahtim Shakib — Talat Mahmood cover<br>Music producer · Sound Hacker</p></div></div></a>
+      <a class="rec " href="https://www.youtube.com/watch?v=A3vteLASpHA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/A3vteLASpHA/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 08 · Cover · 2018</span><div><h3>Ekhon To Somoy Bhalobashar</h3><p>Mahtim &amp; Dimple — Colours FM 101.6<br>Music producer</p></div></div></a>
+      <a class="rec " href="https://www.youtube.com/watch?v=6riDQha4A4Q" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/6riDQha4A4Q/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 09 · Band · 2019</span><div><h3>Jongla Phul</h3><p>F Minor<br>Music producer</p></div></div></a>
+      <a class="rec sig" href="https://www.youtube.com/watch?v=1Xt1w08hTgM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/1Xt1w08hTgM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 10 · Flute rock · 2026</span><span class="tag mono">Soul + peace</span><div><h3>Biker's Paradise</h3><p>Game of Thrones — epic flute rock cover<br>Flute · music producer · Sound Hacker</p></div></div></a>
     </div>
     <h3 class="group">Highlights</h3>
     <div class="ach">
@@ -453,7 +483,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
     <h2><small>Band & studio</small>Ghuddy and Sound Hacker</h2>
     <div class="two">
       <div class="card">
-        <h3>Ghuddy <span class="bn" style="color:var(--muted);font-size:18px">(ঘুড্ডি)</span></h3>
+        <img src="gallery-stage-1.jpg" alt="Shariful Islam Ghuddy performing with Ghuddy" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;border-radius:10px;margin-bottom:16px"><h3>Ghuddy</h3>
         <p>A Bangladeshi band formed in 2007, known for songs inspired by the Liberation War, the spirit of 1971 and the Bangla language. Shariful Islam Ghuddy is a founding member, playing guitar and flute, alongside keyboardist Rizvi Rahman Adit.</p>
         <ul>
           <li>Debut album <em>Latai</em> (2011)</li>
@@ -464,7 +494,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
         <p style="margin-top:14px"><a href="https://www.facebook.com/ghuddyband/">Ghuddy on Facebook →</a></p>
       </div>
       <div class="card">
-        <h3>Sound Hacker <span class="bn" style="color:var(--muted);font-size:18px">(সাউন্ড হ্যাকার)</span></h3>
+        <h3>Sound Hacker</h3>
         <p><em>"Your sound, Hacked to perfection."</em> A Dhaka-based audio production house founded in 2018 by Shariful Islam Ghuddy, bringing composition, recording, sound design, mixing and mastering into one workflow.</p>
         <ul>
           <li>Music production · Recording · Mixing & mastering</li>
@@ -485,8 +515,9 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 <section id="gallery">
   <div class="wrap">
     <h2><small>Studio & road</small>Gallery</h2>
-    <h3 class="group">In the studio</h3>
+    <h3 class="group">On stage &amp; in the studio</h3>
     <div class="gallery three">
+      <a class="g wide" href="gallery-stage-1.jpg" data-cap="On stage with Ghuddy"><img src="gallery-stage-1.jpg" alt="Shariful Islam Ghuddy — on stage with Ghuddy" loading="lazy" width="1800" height="1327" style="object-position:center 35%"><span>On stage with Ghuddy</span></a>
       <a class="g" href="gallery-studio-1.jpg" data-cap="At the console — mixing session"><img src="gallery-studio-1.jpg" alt="Shariful Islam Ghuddy — At the console — mixing session" loading="lazy" width="1600" height="1066"><span>At the console — mixing session</span></a>
       <a class="g" href="gallery-studio-2.jpg" data-cap="Late-night mix at Sound Hacker"><img src="gallery-studio-2.jpg" alt="Shariful Islam Ghuddy — Late-night mix at Sound Hacker" loading="lazy" width="1189" height="1600"><span>Late-night mix at Sound Hacker</span></a>
       <a class="g" href="gallery-studio-3.jpg" data-cap="Studio session, helmet still on"><img src="gallery-studio-3.jpg" alt="Shariful Islam Ghuddy — Studio session, helmet still on" loading="lazy" width="1600" height="950"><span>Studio session, helmet still on</span></a>
@@ -523,19 +554,9 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
       <li><div class="src"><b>Daily Sun</b>10 May 2020</div><div><a href="https://www.daily-sun.com/printversion/details/481271/">Yousuf lends voice to "O Chand Samle Rakho Jochhnake"</a> — re-arrangement by Sound Hacker.</div></li>
       <li><div class="src"><b>The Business Standard</b>3 Jan 2020</div><div><a href="https://www.tbsnews.net/entertainment/f-minor-releases-new-song">F-Minor releases new song</a> — composed by Sharif Sumon with Yousuf Ahmed Khan and Rizvi Adit; released under Sound Hacker.</div></li>
       <li><div class="src"><b>The Daily Star</b>12 Nov 2019</div><div><a href="https://www.thedailystar.net/arts-entertainment/news/heartwarming-musical-tribute-humayun-ahmed-1826350">A heartwarming musical tribute to Humayun Ahmed</a> — Sound Hacker's "Kothao Keu Nei".</div></li>
-      <li><div class="src"><b>Kaler Kantho</b>3 May 2016</div><div><a href="https://www.kalerkantho.com/online/entertainment/2016/05/03/354294">আহমেদাবাদে গাইলেন বাংলাদেশের শরীফ সুমন</a> — on founding Ghuddy in 2007, studying in Mumbai and playing with the Indian band Reeva.</div></li>
+      <li><div class="src"><b>Kaler Kantho</b>3 May 2016</div><div><a href="https://www.kalerkantho.com/online/entertainment/2016/05/03/354294">Bangladesh's Sharif Sumon performs in Ahmedabad</a> (in Bangla) — on founding Ghuddy in 2007, studying in Mumbai and playing with the Indian band Reeva.</div></li>
       <li><div class="src"><b>Dhaka Courier</b></div><div><a href="https://dhakacourier.com.bd/news/Culture/Ghuddy-releases-second-album-with-patriotic-songs/1215">Ghuddy releases second album with patriotic songs</a> — lists Sharif Sumon on guitar.</div></li>
     </ul>
-  </div>
-</section>
-
-<section id="bangla" class="bn">
-  <div class="wrap">
-    <h2><small>বাংলা</small>শরীফুল ইসলাম ঘুড্ডি</h2>
-    <p>ঢাকাভিত্তিক সংগীত পরিচালক, সাউন্ড ইঞ্জিনিয়ার ও সংগীতশিল্পী শরীফুল ইসলাম ঘুড্ডি (শরীফ সুমন নামেও পরিচিত) প্রায় দুই দশক ধরে বাংলাদেশের সংগীত অঙ্গনে কাজ করছেন। তিনি ২০০৭ সালে গঠিত ব্যান্ড ঘুড্ডির প্রতিষ্ঠাতা সদস্য, যেখানে তিনি গিটার ও বাঁশি বাজান। ব্যান্ডের নামটিই এখন তাঁর পরিচয়ের অংশ হয়ে গেছে।</p>
-    <p>২০১৫ সালে তিনি রেডিও কালারস এফএম ১০১.৬-এ অডিও ইঞ্জিনিয়ার হিসেবে যোগ দেন। ২০১৬ সালে তিনি ভারতের মুম্বাই মিউজিক ইনস্টিটিউটে সাউন্ড ইঞ্জিনিয়ারিং নিয়ে পড়াশোনা করেন এবং স্টেইনবার্গ থেকে প্রফেশনাল সার্টিফিকেশন অর্জন করেন। সেখানে থাকাকালীন ভারতীয় ব্যান্ড রিভা-তে রিদম গিটারিস্ট হিসেবেও বাজিয়েছেন।</p>
-    <p>২০১৮ সালে তিনি ঢাকার কাকরাইলে অডিও প্রোডাকশন হাউস সাউন্ড হ্যাকার প্রতিষ্ঠা করেন। রেদওয়ান রনির চলচ্চিত্র "দম"-এর গান "কোথায় পাবো তাহারে"-র সংগীত আয়োজন, মিক্সিং ও মাস্টারিং, জাহিদ প্রীতমের নাটকের গান "কাজল চোখে ভালোবাসা"-র সুর এবং "ক্লোজআপ কাছে আসার গল্প ২০২৫"-এর শর্টফিল্ম "এক গুচ্ছ কদম"-এর আবহ সংগীত তাঁর উল্লেখযোগ্য কাজ। তাহসান খান, মাহতিম সাকিব, ইউসুফ আহমেদ খান, পারশা মাহজাবীনসহ অনেক শিল্পী এবং ইউনিলিভার, লাক্স, জাপান দূতাবাস, প্ল্যান ইন্টারন্যাশনাল ও সেভ দ্য চিলড্রেনের মতো প্রতিষ্ঠানের সঙ্গে তিনি কাজ করেছেন।</p>
-    <p>স্টুডিওর বাইরে তিনি একজন বাইক রাইডার ও ভ্রমণপ্রেমী।</p>
   </div>
 </section>
 
@@ -554,7 +575,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
 </section>
 
 <footer>
-  <div class="wrap">© Shariful Islam Ghuddy · শরীফুল ইসলাম ঘুড্ডি · Sound Hacker, Dhaka, Bangladesh</div>
+  <div class="wrap">© Shariful Islam Ghuddy · Sound Hacker, Dhaka, Bangladesh</div>
 </footer>
 
 <script>
