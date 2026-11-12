@@ -269,6 +269,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 .gw h3 i{color:var(--gold)}
 .gw p{font-size:17px;color:#d8cebf;max-width:640px}
 .gw .btn{display:inline-block;margin-top:24px;border:1px solid var(--gold);color:var(--gold);padding:11px 20px;border-radius:30px;font-size:14px}
+.gw .btn-play{background:var(--gold);color:#111;margin-right:8px}
 .gw .btn:hover{background:var(--gold);color:#111;text-decoration:none}
 .gw .trophy{position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-size:340px;opacity:.05;pointer-events:none}
 .hx .gbadge{display:inline-flex;align-items:center;gap:10px;margin-top:22px;border:1px solid rgba(224,165,74,.55);background:rgba(11,10,9,.55);backdrop-filter:blur(6px);border-radius:30px;padding:9px 16px;color:var(--ink);font-size:14px}
@@ -316,6 +317,13 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)!important}
 .rv.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.shelf .rec.wide{grid-column:1/-1;aspect-ratio:auto;height:320px}
+.shelf .rec.wide .disc{display:none}
+.shelf .rec.wide .sleeve{background:#0b0a09!important}
+.shelf .rec.wide .bg{left:40%;background-size:cover}
+.shelf .rec.wide .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0a09 0%,rgba(11,10,9,.3) 35%,transparent 60%)}
+.shelf .rec.wide h3{font-size:34px}.shelf .rec.wide p{font-size:14px;max-width:46%}
+@media(max-width:900px){.shelf .rec.wide{height:240px}.shelf .rec.wide .bg{left:0}.shelf .rec.wide p{max-width:none}}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -488,7 +496,7 @@ body.gh-off #ghost{display:none}
       <h3>The sound behind a <i>world record</i>.</h3>
       <p>Through <strong>Sound Hacker</strong>, <strong>Shariful Islam Ghuddy</strong> (composer &amp; music producer) and <strong>MD Rizvi Rahman</strong> (music producer / pianist) created the jingle and background music for Clear Men's <strong>"Pass Koro, Record Goro"</strong> campaign (Unilever Bangladesh, agency Adcomm Limited) — used across the campaign videos, digital and on-ground activations. The campaign achieved the Guinness World Records™ title for the <strong>most people in an online video chain passing a football</strong>: 8,239 people, Dhaka, 9 December 2025.</p>
       <p class="gnote mono">Credits verified by Adcomm Limited · Campaign 25 Sep – 6 Nov 2025</p>
-      <a class="btn" href="https://www.guinnessworldrecords.com/world-records/586293-most-people-in-an-online-video-chain-passing-a-football">View the record on Guinness World Records →</a>
+      <a class="btn btn-play" href="https://www.facebook.com/share/r/1azamPThoq/" target="_blank" rel="noopener">▶ Watch the campaign jingle</a> <a class="btn" href="https://www.guinnessworldrecords.com/world-records/586293-most-people-in-an-online-video-chain-passing-a-football">View the record on Guinness World Records →</a>
     </div>
   </div></div>
 </section>
@@ -527,11 +535,12 @@ body.gh-off #ghost{display:none}
       <a class="rec " href="https://www.youtube.com/watch?v=LedapTiMZMM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/LedapTiMZMM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 03 · Drama · 2025</span><div><h3>Kajol Chokhe Valobasha</h3><p>Mahtim Shakib · <em>Emon Dine Tare Bola Jay</em><br>Composer · arrangement &amp; drama BGM by Sound Hacker</p></div></div></a>
       <a class="rec " href="https://www.youtube.com/watch?v=sl1DxUs-OfM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/sl1DxUs-OfM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 04 · Short film · 2025</span><div><h3>Ek Guccho Kadam</h3><p>Closeup Kache Ashar Golpo<br>Background score</p></div></div></a>
       <a class="rec " href="https://music.apple.com/us/artist/ghuddy/689244959" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(gallery-studio-5.jpg)"></div><span class="play">▶</span><span class="no mono">No. 05 · Band · 2019</span><div><h3>Sharoni 71</h3><p>Ghuddy — Manchitro<br>MTV Chart Attack</p></div></div></a>
-      <a class="rec " href="https://www.guinnessworldrecords.com/world-records/586293-most-people-in-an-online-video-chain-passing-a-football" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(gallery-studio-4.jpg)"></div><span class="play">▶</span><span class="no mono">No. 06 · Jingle · 2025</span><div><h3>Pass Koro, Record Goro</h3><p>Clear Men — Guinness World Records campaign<br>Jingle &amp; BGM · composer, producer</p></div></div></a>
+      <a class="rec " href="https://www.facebook.com/share/r/1azamPThoq/" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(campaign-clearmen.jpg);background-position:center 18%;filter:brightness(.62) saturate(.95)"></div><span class="play">▶</span><span class="no mono">No. 06 · Jingle · 2025</span><div><h3>Pass Koro, Record Goro</h3><p>Clear Men — Guinness World Records campaign<br>Jingle &amp; BGM · composer, producer</p></div></div></a>
       <a class="rec " href="https://www.youtube.com/watch?v=aQSzM4uX22A" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/aQSzM4uX22A/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 07 · Cover · 2018</span><div><h3>Adho Raat</h3><p>Mahtim Shakib — Talat Mahmood cover<br>Music producer · Sound Hacker</p></div></div></a>
       <a class="rec " href="https://www.youtube.com/watch?v=A3vteLASpHA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/A3vteLASpHA/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 08 · Cover · 2018</span><div><h3>Ekhon To Somoy Bhalobashar</h3><p>Mahtim &amp; Dimple — Colours FM 101.6<br>Music producer</p></div></div></a>
       <a class="rec " href="https://www.youtube.com/watch?v=6riDQha4A4Q" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/6riDQha4A4Q/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 09 · Band · 2019</span><div><h3>Jongla Phul</h3><p>F Minor<br>Music producer</p></div></div></a>
-      <a class="rec sig" href="https://www.youtube.com/watch?v=1Xt1w08hTgM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/1Xt1w08hTgM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 10 · Flute rock · 2026</span><span class="tag mono">Soul + peace</span><div><h3>Biker's Paradise</h3><p>Game of Thrones — epic flute rock cover<br>Flute · music producer · Sound Hacker</p></div></div></a>
+      <a class="rec wide" href="https://www.facebook.com/reel/1536204420399839" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(lux-sundori-komola-faces.jpg);background-position:center 30%;filter:brightness(.7) saturate(.95)"></div><span class="play">▶</span><span class="no mono">No. 10 · Jingle · LUX</span><div><h3>Sundori Komola</h3><p>LUX ft. Tahsan Khan &amp; Mithila<br>Jingle &amp; music arrangement · Sound Hacker — Shariful Islam Ghuddy &amp; MD Rizvi Rahman</p></div></div></a>
+      <a class="rec sig" href="https://www.youtube.com/watch?v=1Xt1w08hTgM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/1Xt1w08hTgM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 11 · Flute rock · 2026</span><span class="tag mono">Soul + peace</span><div><h3>Biker's Paradise</h3><p>Game of Thrones — epic flute rock cover<br>Flute · music producer · Sound Hacker</p></div></div></a>
     </div>
     <h3 class="group">Highlights</h3>
     <div class="ach">
@@ -571,7 +580,7 @@ body.gh-off #ghost{display:none}
     <h3 class="group">Brands, jingles & institutions</h3>
     <ul class="list">
       <li>Clear Men Bangladesh — "Pass Koro, Record Goro" (2025)<span>Jingle &amp; background music — composition and production (Sound Hacker) for the campaign that achieved a Guinness World Records™ title</span></li>
-      <li>LUX ft. Tahsan — "Sundori Komola"<span>Jingle · music arrangement, mixing & mastering</span></li>
+      <li><a href="https://www.facebook.com/reel/1536204420399839" target="_blank" rel="noopener">LUX ft. Tahsan Khan &amp; Mithila — "Sundori Komola"</a><span>Complete jingle &amp; music arrangement, mixing &amp; mastering by Sound Hacker — Shariful Islam Ghuddy &amp; MD Rizvi Rahman</span></li>
       <li>Embassy of Japan — Japan Fest 2021<span>With Tahsan Khan</span></li>
       <li>"Shundor" — women empowerment commercial<span>Featuring Bidya Sinha Saha Mim</span></li>
       <li>Save the Children · Plan International · ActionAid Bangladesh · OBR<span>NGO & development campaigns</span></li>
