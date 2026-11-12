@@ -353,7 +353,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 #ghost .gh-notes span:nth-child(1){left:10px;animation-delay:0s}#ghost .gh-notes span:nth-child(2){left:70px;animation-delay:1.1s}#ghost .gh-notes span:nth-child(3){left:110px;animation-delay:2.1s}
 @keyframes gh-note{0%{opacity:0;transform:translateY(80px) rotate(-10deg)}20%{opacity:.9}100%{opacity:0;transform:translateY(-20px) rotate(12deg)}}
 /* clap */
-#ghost .gh-clap{position:absolute;left:-46px;top:120px;width:90px;height:90px;opacity:0;transition:opacity .2s}
+#ghost .gh-clap{position:absolute;left:10px;top:95px;width:90px;height:90px;z-index:3;opacity:0;transition:opacity .2s}
 #ghost.clap .gh-clap{opacity:1}
 #ghost .gh-clap svg{position:absolute;left:20px;top:20px;width:50px;height:50px;overflow:visible}
 #ghost .gh-clap .hl{transform-origin:25px 45px;animation:gh-hl .32s ease-in-out infinite alternate}
@@ -372,10 +372,10 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 #ghost .gh-speed i{position:absolute;right:-30px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,rgba(239,106,79,.8));animation:gh-streak .5s linear infinite}
 #ghost .gh-speed i:nth-child(1){top:110px;width:90px}#ghost .gh-speed i:nth-child(2){top:170px;width:130px;animation-delay:.15s}
 #ghost .gh-speed i:nth-child(3){top:230px;width:70px;animation-delay:.3s}#ghost .gh-speed i:nth-child(4){top:290px;width:110px;animation-delay:.05s}
-#ghost .gh-grip{position:absolute;left:-58px;top:150px;width:80px;height:40px}
+#ghost .gh-grip{position:absolute;left:-14px;top:150px;width:80px;height:40px;z-index:3}
 #ghost .gh-grip .tw{transform-origin:58px 20px;animation:gh-twist .7s ease-in-out infinite alternate}
 @keyframes gh-twist{from{transform:rotate(0)}to{transform:rotate(-38deg)}}
-#ghost .gh-rpm{position:absolute;left:-58px;top:200px;width:70px}
+#ghost .gh-rpm{position:absolute;left:-6px;top:196px;width:62px;z-index:3}
 #ghost .gh-rpm div{display:flex;gap:2px;align-items:flex-end;height:22px}
 #ghost .gh-rpm div i{flex:1;background:linear-gradient(0deg,#6f8f3a,var(--gold) 60%,var(--ember));border-radius:1px;transform-origin:bottom;animation:gh-rev .7s ease-in-out infinite alternate}
 #ghost .gh-rpm div i:nth-child(n+5){animation-delay:.1s}#ghost .gh-rpm div i:nth-child(n+7){animation-delay:.2s}
@@ -391,7 +391,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 body.gh-off #ghost{display:none}
 @media(max-width:900px){#ghost{width:100px;height:260px;right:4px}#ghost .gh-body{width:90px;margin-left:-45px}#ghost .gh-floor{width:100px;margin-left:-50px}
   #ghost .gh-grip,#ghost .gh-rpm,#ghost .gh-clap{transform:scale(.75);transform-origin:right center}#ghost .gh-body{opacity:.45}}
-@media(max-width:1500px) and (min-width:901px){#ghost{width:120px;height:320px;right:6px}#ghost .gh-body{width:112px;margin-left:-56px}}
+@media(max-width:1500px) and (min-width:901px){#ghost{width:110px;height:300px;right:2px}#ghost .gh-body{width:100px;margin-left:-50px}#ghost .gh-floor{width:110px;margin-left:-55px}}
 @media(prefers-reduced-motion:reduce){#ghost *{animation:none!important}#ghost .gh-body{opacity:.35}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -713,7 +713,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
     <svg class="gh-grip" viewBox="0 0 80 40"><line x1="0" y1="20" x2="40" y2="20" stroke="#8a7a66" stroke-width="5" stroke-linecap="round"/><g class="tw"><rect x="40" y="11" width="36" height="18" rx="6" fill="#1b1815" stroke="#e0a54a" stroke-width="1.5"/><line x1="46" y1="13" x2="46" y2="27" stroke="#e0a54a" stroke-width="1"/><line x1="52" y1="13" x2="52" y2="27" stroke="#e0a54a" stroke-width="1"/><line x1="58" y1="13" x2="58" y2="27" stroke="#e0a54a" stroke-width="1"/><line x1="64" y1="13" x2="64" y2="27" stroke="#e0a54a" stroke-width="1"/></g></svg>
     <div class="gh-rpm"><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>RPM</span></div>
   </div>
-  <div class="gh-clap"><svg viewBox="0 0 50 50"><g class="hl"><path d="M25 45 C14 44 10 34 12 22 C13 15 15 9 18 6 C20 4 22 6 21 9 L20 16 L23 4 C24 1 27 2 27 5 L25 18" fill="#1b1815" stroke="#e0a54a" stroke-width="1.6" stroke-linejoin="round"/></g><g class="hr"><path d="M25 45 C36 44 40 34 38 22 C37 15 35 9 32 6 C30 4 28 6 29 9 L30 16 L27 4 C26 1 23 2 23 5 L25 18" fill="#1b1815" stroke="#ef6a4f" stroke-width="1.6" stroke-linejoin="round"/></g></svg><b></b><b></b></div>
+  <div class="gh-clap"><svg viewBox="0 0 50 50"><g class="hl"><path d="M25 45 C14 44 10 34 12 22 C13 15 15 9 18 6 C20 4 22 6 21 9 L20 16 L23 4 C24 1 27 2 27 5 L25 18" fill="rgba(224,165,74,.35)" stroke="#f0c070" stroke-width="2" stroke-linejoin="round"/></g><g class="hr"><path d="M25 45 C36 44 40 34 38 22 C37 15 35 9 32 6 C30 4 28 6 29 9 L30 16 L27 4 C26 1 23 2 23 5 L25 18" fill="rgba(239,106,79,.35)" stroke="#ff8a6a" stroke-width="2" stroke-linejoin="round"/></g></svg><b></b><b></b></div>
   <div class="gh-floor"></div>
   <div class="gh-body"><img src="ghost.png" alt="" width="283" height="720"><img class="gh-real" data-src="ghost-real.png" alt="" width="283" height="720"></div>
 </div>
@@ -732,7 +732,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
   function arrive(){ if(arrived) return; arrived=true; g.classList.add('in','arrive'); tg.classList.add('show'); real.setAttribute('src',real.dataset.src); setTimeout(function(){g.classList.remove('arrive')},1900); setTimeout(reveal,1700); }
   var gb=g.querySelector('.gh-body'); gb.addEventListener('mouseenter',reveal); gb.addEventListener('touchstart',reveal,{passive:true});
   function clap(){ if(!arrived) return; g.classList.remove('think','listen','ride'); g.classList.add('clap'); wake(); clearTimeout(clapT);
-    clapT=setTimeout(function(){ g.classList.remove('clap'); clapT=null; var m=mood; mood=''; setMood(m||'listen'); },1800); }
+    clapT=setTimeout(function(){ g.classList.remove('clap'); clapT=null; var m=mood; mood=''; setMood(m||'listen'); },2400); }
   // which mood for which part of the page
   var map=[['#notes','think'],['#guinness','listen'],['#mumbai','listen'],['#about','think'],['#works','listen'],['#ghuddy','listen'],['#press','think'],['#contact','think']];
   var road=null; document.querySelectorAll('h3.group').forEach(function(h){ if(/road/i.test(h.textContent)) road=h.nextElementSibling; });
