@@ -354,6 +354,10 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 @media(max-width:520px){.works2{grid-template-columns:1fr}.wk,.wk.feat{grid-column:1/-1}}
 .h2-road{font-style:italic;color:var(--gold)}
 @media(min-width:901px){.h2-road{white-space:nowrap}}
+.ch{display:flex;align-items:center;gap:12px}.clogo{height:44px;width:auto;flex:none}
+.gallery.stage2{grid-template-columns:1.45fr 1fr}.gallery.stage2 a.g{aspect-ratio:auto;height:420px}
+.tv.rides{grid-template-columns:1fr 1fr}.tv.rides .pl{left:auto;top:auto;right:16px;bottom:16px;margin:0}
+@media(max-width:900px){.gallery.stage2{grid-template-columns:1fr}.gallery.stage2 a.g{height:auto;aspect-ratio:4/3}.tv.rides{grid-template-columns:1fr}}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -456,6 +460,11 @@ body.gh-off #ghost{display:none}
 @media(max-width:900px){#ghost{width:100px;height:260px;right:4px}#ghost .gh-body{width:90px;margin-left:-45px}#ghost .gh-floor{width:100px;margin-left:-50px}
   #ghost .gh-grip,#ghost .gh-rpm,#ghost .gh-clap{transform:scale(.75);transform-origin:right center}#ghost .gh-body{opacity:.45}}
 @media(max-width:1500px) and (min-width:901px){#ghost{width:110px;height:300px;right:2px}#ghost .gh-body{width:100px;margin-left:-50px}#ghost .gh-floor{width:110px;margin-left:-55px}}
+@media(min-width:901px) and (max-width:1499px){
+  #ghost{width:96px;height:270px;right:0}#ghost .gh-body{width:86px;margin-left:-43px}#ghost .gh-floor{width:90px;margin-left:-45px}
+  section .wrap{padding-right:max(24px,calc(124px - (100vw - 1080px)/2))}
+  #notes .wrap{padding-right:max(24px,calc(124px - (100vw - 1200px)/2))}
+}
 @media(prefers-reduced-motion:reduce){#ghost *{animation:none!important}#ghost .gh-body{opacity:.35}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -494,7 +503,7 @@ body.gh-off #ghost{display:none}
 
 <section id="notes">
   <div class="wrap" style="max-width:1200px">
-    <h2><small>Liner notes</small>The best track is the next one. <em class="h2-road">The best road too.</em></h2>
+    <h2><small>Liner notes</small>The best track is the next one.</h2>
     <div class="grid">
       <div>
         <div class="sig"><img src="photo.jpg" alt="Shariful Islam Ghuddy" width="74" height="74"><p><b style="color:var(--ink)">Shariful Islam Ghuddy</b> · also credited as Sharif Sumon<br>Composer, arranger &amp; mix engineer · Founder of Ghuddy &amp; Sound Hacker, Dhaka</p></div>
@@ -634,7 +643,7 @@ body.gh-off #ghost{display:none}
     <h2><small>Band & studio</small>Ghuddy and Sound Hacker</h2>
     <div class="two">
       <div class="card">
-        <img src="gallery-stage-1.jpg" alt="Shariful Islam Ghuddy performing with Ghuddy" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;border-radius:10px;margin-bottom:16px"><h3>Ghuddy</h3>
+        <img src="gallery-stage-1.jpg" alt="Shariful Islam Ghuddy performing with Ghuddy" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;border-radius:10px;margin-bottom:16px"><h3 class="ch"><img class="clogo" src="logo-ghuddy.png" alt="Ghuddy logo" width="40" height="48">Ghuddy</h3>
         <p>A Bangladeshi band formed in 2007, known for songs inspired by the Liberation War, the spirit of 1971 and the Bangla language. Shariful Islam Ghuddy is its founder, playing guitar and flute, alongside keyboardist Rizvi Rahman Adit.</p>
         <ul>
           <li>Debut album <em>Latai</em> (2011)</li>
@@ -644,7 +653,7 @@ body.gh-off #ghost{display:none}
         <p style="margin-top:14px"><a href="https://www.facebook.com/ghuddyband/">Ghuddy on Facebook →</a></p>
       </div>
       <div class="card">
-        <img src="soundhacker-silver-play-button.jpg" alt="Shariful Islam Ghuddy with Sound Hacker's YouTube Silver Play Button" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;border-radius:10px;margin-bottom:16px"><h3>Sound Hacker</h3>
+        <img src="soundhacker-silver-play-button.jpg" alt="Shariful Islam Ghuddy with Sound Hacker's YouTube Silver Play Button" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;border-radius:10px;margin-bottom:16px"><h3 class="ch"><img class="clogo" src="logo-soundhacker.png" alt="Sound Hacker logo" width="45" height="48">Sound Hacker</h3>
         <p><em>"Your sound, Hacked to perfection."</em> A Dhaka-based audio production house founded in 2018 by Shariful Islam Ghuddy, bringing composition, recording, sound design, mixing and mastering into one workflow.</p>
         <ul>
           <li>Music production · Recording · Mixing & mastering</li>
@@ -675,6 +684,18 @@ body.gh-off #ghost{display:none}
       <a class="g" href="gallery-studio-4.jpg" data-cap="With the studio&#39;s audio interfaces"><img src="gallery-studio-4.jpg" alt="Shariful Islam Ghuddy — With the studio&#39;s audio interfaces" loading="lazy" width="1600" height="1200"><span>With the studio&#39;s audio interfaces</span></a>
       <a class="g" href="gallery-studio-5.jpg" data-cap="Inside the Sound Hacker control room"><img src="gallery-studio-5.jpg" alt="Shariful Islam Ghuddy — Inside the Sound Hacker control room" loading="lazy" width="1600" height="1418"><span>Inside the Sound Hacker control room</span></a>
       <a class="g" href="gallery-studio-6.jpg" data-cap="Between takes"><img src="gallery-studio-6.jpg" alt="Shariful Islam Ghuddy — Between takes" loading="lazy" width="1600" height="901"><span>Between takes</span></a>
+    </div>
+    <h3 class="group">Live, on set &amp; off stage</h3>
+    <div class="gallery stage2">
+      <a class="g" href="gallery-stage-show.jpg" data-cap="Ghuddy live on stage"><img src="gallery-stage-show.jpg" alt="Ghuddy band performing live on stage" loading="lazy" width="720" height="478"><span>Ghuddy live on stage</span></a>
+      <a class="g" href="gallery-stage-band.jpg" data-cap="Ghuddy — Manchitro shoot · photo © MRJ's Pixies"><img src="gallery-stage-band.jpg" alt="Ghuddy band members — Manchitro photo shoot" loading="lazy" width="1333" height="1600" style="object-position:center 60%"><span>Manchitro shoot · © MRJ's Pixies</span></a>
+      <a class="g" href="gallery-stage-tv.jpg" data-cap="Live with Ghuddy on Desh TV"><img src="gallery-stage-tv.jpg" alt="Shariful Islam Ghuddy singing live with Ghuddy on Desh TV" loading="lazy" width="1442" height="1028" style="object-position:center 35%"><span>Live on Desh TV</span></a>
+      <a class="g" href="gallery-flute.jpg" data-cap="With the flute — by the water"><img src="gallery-flute.jpg" alt="Shariful Islam Ghuddy playing the bamboo flute outdoors" loading="lazy" width="1015" height="1600" style="object-position:center 25%"><span>With the flute</span></a>
+    </div>
+    <h3 class="group">Ride films</h3>
+    <div class="tv rides">
+      <a class="tvc" href="https://www.youtube.com/watch?v=tKX_FFVifG4" target="_blank" rel="noopener"><div class="th" style="background-image:url(ride-film-1.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">Rider Ghuddy · YouTube</span><b>One Ride, Endless Stories</b><small>Travel film · Braveheart theme</small></div></a>
+      <a class="tvc" href="https://www.youtube.com/watch?v=Ye0VAHsw3Ew" target="_blank" rel="noopener"><div class="th" style="background-image:url(ride-film-2.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">Rider Ghuddy · YouTube</span><b>Road To Mountain</b><small>Honda ADV · Rangamati, Bangladesh Hill Tracts · CityCell cover</small></div></a>
     </div>
     <h3 class="group">On the road — rider &amp; traveler</h3>
     <div class="gallery">
