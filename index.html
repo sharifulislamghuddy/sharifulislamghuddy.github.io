@@ -324,6 +324,14 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 .shelf .rec.wide .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0a09 0%,rgba(11,10,9,.3) 35%,transparent 60%)}
 .shelf .rec.wide h3{font-size:34px}.shelf .rec.wide p{font-size:14px;max-width:46%}
 @media(max-width:900px){.shelf .rec.wide{height:240px}.shelf .rec.wide .bg{left:0}.shelf .rec.wide p{max-width:none}}
+.tv{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:6px 0 34px}
+.tvc{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(23,21,19,.6);color:var(--ink);transition:border-color .3s,transform .3s}
+.tvc:hover{border-color:var(--gold);transform:translateY(-3px);text-decoration:none}
+.tvc .th{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center}
+.tvc .pl{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px;border-radius:50%;background:rgba(224,165,74,.92);color:#111;display:grid;place-items:center;font-size:16px}
+.tvc .tm{padding:14px 16px 16px}.tvc .tm span{color:var(--gold);font-size:10px}
+.tvc .tm b{display:block;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:19px;line-height:1.25;margin:8px 0 6px}
+.tvc .tm small{color:var(--muted);font-size:13px}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -333,7 +341,17 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 
 @media(max-width:900px){
   #topnav .links{display:none}
-  .hx .person{right:-10vw;height:52vh;opacity:.55}
+  .hx{height:100svh;min-height:700px}
+  .hx .person{right:50%;transform:translateX(50%);top:64px;bottom:auto;height:min(46svh,400px);width:auto;opacity:1;
+    -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+  .hx .shade{background:linear-gradient(0deg,#0b0a09 0%,rgba(11,10,9,.92) 38%,rgba(11,10,9,.35) 62%,rgba(11,10,9,.15) 100%)}
+  .hx .title{top:auto;bottom:118px;transform:none;left:22px;right:22px}
+  .hx .name{font-size:36px}
+  .hx .mantra{font-size:24px;margin-top:16px}
+  .hx .roles2{margin-top:14px;font-size:10px}
+  .hx .gbadge{margin-top:14px;font-size:12px;padding:7px 12px}
+  .hx canvas{bottom:70px;height:70px;opacity:.4}
+  .hx .deck{bottom:22px;left:22px;right:22px}
   .hx .deck{grid-template-columns:1fr}.hx .side{display:none}
   #notes .grid,.ach{grid-template-columns:1fr}
   .shelf{grid-template-columns:repeat(2,1fr)}
@@ -428,7 +446,7 @@ body.gh-off #ghost{display:none}
 
 <nav id="topnav">
   <a class="logo" href="#top"><svg viewBox="0 0 30 42" fill="none" stroke="#e0a54a" stroke-width="1.6"><path d="M15 1 L28 14 L15 27 L2 14 Z"/><path d="M15 1 V27 M2 14 H28"/><path d="M15 27 C 11 31, 19 34, 15 38 S 12 41, 14 42"/></svg>GHUDDY</a>
-  <div class="links"><a href="#notes">Story</a><a href="#works">Works</a><a href="#ghuddy">Band & Studio</a><a href="#gallery">Gallery</a><a href="#press">Press</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#notes">Story</a><a href="#works">Works</a><a href="#ghuddy">Band & Studio</a><a href="#gallery">Gallery</a><a href="#press">Media</a><a href="#contact">Contact</a></div>
 </nav>
 
 <header class="hx" id="top">
@@ -444,7 +462,7 @@ body.gh-off #ghost{display:none}
     <div class="roles2 mono">Music composer &amp; producer · Sound engineer · Rider</div>
     <a class="gbadge" href="#guinness">🏆 <span>Music for a <b>Guinness World Records™</b> campaign · 2025</span></a>
   </div>
-  <img class="person" src="hero-person.png" alt="Shariful Islam Ghuddy" width="520" height="620">
+  <img class="person" src="hero-person.png" alt="Shariful Islam Ghuddy" width="800" height="955">
   <div class="deck">
     <div class="side mono" id="sideA"><div class="vu" id="vuA"></div>Studio</div>
     <div class="fader" id="fader" role="slider" aria-label="Studio to road crossfader" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="hint mono">⟵ soul · drag · peace ⟶</div><div class="rail"></div><div class="ticks"></div><div class="cap"></div></div>
@@ -659,7 +677,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
 
 <section id="press">
   <div class="wrap">
-    <h2><small>In the news</small>Press</h2>
+    <h2><small>Press, TV &amp; online</small>In the Media</h2>
+    <h3 class="group">TV interviews &amp; features</h3>
+    <div class="tv">
+      <a class="tvc" href="https://www.youtube.com/watch?v=w5zM9uy7ZgQ" target="_blank" rel="noopener"><div class="th" style="background-image:url(tv-manchitro.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">Channel 24 · Mar 2019</span><b>Ghuddy launches the album <em>Manchitro</em></b><small>TV news report on the album launch (Bangla)</small></div></a>
+      <a class="tvc" href="https://www.youtube.com/watch?v=GQfV9w1UFbY" target="_blank" rel="noopener"><div class="th" style="background-image:url(tv-kothao-keu-nei.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">Channel 24 · Nov 2019</span><b>"Kothao Keu Nei" — a song built from Humayun Ahmed's book titles</b><small>TV news report (Bangla)</small></div></a>
+    </div>
+    <h3 class="group">In print &amp; online</h3>
     <ul class="press">
       <li><div class="src"><b>News24</b>23 Oct 2025</div><div><a href="https://www.news24bd.tv/details/248611">Zahid Pritom's drama with Tousif and Urbi</a> — credits Shariful Islam as composer and Sound Hacker for music arrangement.</div></li>
       <li><div class="src"><b>Daily New Nation</b>12 Oct 2023</div><div><a href="https://dailynewnation.com/news/589879">Yousuf Ahmed Khan's two new songs</a> — music arranged by Sound Hacker.</div></li>
