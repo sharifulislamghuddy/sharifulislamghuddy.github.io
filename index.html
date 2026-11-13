@@ -212,7 +212,7 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 /* liner notes */
 #notes{padding:130px 0 110px}
 #notes .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:6vw;align-items:start}
-#notes .big{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,3.4vw,50px);line-height:1.15;color:var(--ink)}
+#notes .big{font-family:Fraunces,Georgia,serif;font-size:clamp(26px,2.8vw,40px);line-height:1.15;color:var(--ink)}
 #notes .big i{color:var(--gold)}
 #notes .big .bn{display:block;font-size:.5em;color:var(--muted);margin-top:22px;line-height:1.55}
 #notes .sig{margin-top:36px;display:flex;gap:18px;align-items:center}
@@ -332,6 +332,28 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 .tvc .tm{padding:14px 16px 16px}.tvc .tm span{color:var(--gold);font-size:10px}
 .tvc .tm b{display:block;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:19px;line-height:1.25;margin:8px 0 6px}
 .tvc .tm small{color:var(--muted);font-size:13px}
+
+/* works — clean playlist grid */
+.works2{display:grid;grid-template-columns:repeat(6,1fr);gap:36px 26px;margin:14px 0 56px}
+.wk{display:block;color:var(--ink);grid-column:span 2}
+.wk.feat{grid-column:span 3}
+.wk:hover{text-decoration:none}
+.wk-th{position:relative;aspect-ratio:16/9;border-radius:10px;background-size:cover;background-color:#17140f;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.45);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.wk-th:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,10,9,.55))}
+.wk:hover .wk-th{transform:translateY(-4px)}
+.wk-pl{position:absolute;z-index:2;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:#111;display:grid;place-items:center;font-size:13px;opacity:.9;transition:transform .35s,opacity .35s}
+.wk:hover .wk-pl{transform:scale(1.12);opacity:1}
+.wk.feat .wk-pl{width:52px;height:52px;font-size:17px;right:16px;bottom:16px}
+.wk-tx{padding:14px 2px 0}
+.wk-k{color:var(--muted);font-size:10px;display:flex;gap:10px}.wk-k span{color:var(--gold)}
+.wk h3{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:21px;line-height:1.2;margin:7px 0 4px;color:var(--ink)}
+.wk.feat h3{font-size:28px}
+.wk p{font-size:14px;color:#cfc5b6;margin:0}
+.wk p.wk-r{color:var(--gold);font-size:13px;margin-top:3px}
+@media(max-width:900px){.works2{grid-template-columns:1fr 1fr;gap:26px 16px}.wk{grid-column:span 1}.wk.feat{grid-column:1/-1}.wk h3{font-size:17px}.wk.feat h3{font-size:22px}.wk p{font-size:12.5px}}
+@media(max-width:520px){.works2{grid-template-columns:1fr}.wk,.wk.feat{grid-column:1/-1}}
+.h2-road{font-style:italic;color:var(--gold)}
+@media(min-width:901px){.h2-road{white-space:nowrap}}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -472,10 +494,9 @@ body.gh-off #ghost{display:none}
 
 <section id="notes">
   <div class="wrap" style="max-width:1200px">
-    <h2><small>Liner notes</small>The story so far</h2>
+    <h2><small>Liner notes</small>The best track is the next one. <em class="h2-road">The best road too.</em></h2>
     <div class="grid">
       <div>
-        <p class="big">I don't fall in love easily. But when I do — with a person, a song, or a <i>road</i> — I give it everything.</p>
         <div class="sig"><img src="photo.jpg" alt="Shariful Islam Ghuddy" width="74" height="74"><p><b style="color:var(--ink)">Shariful Islam Ghuddy</b> · also credited as Sharif Sumon<br>Composer, arranger &amp; mix engineer · Founder of Ghuddy &amp; Sound Hacker, Dhaka</p></div>
         <div class="links2">
           <a href="https://www.youtube.com/@Sharifulislamghuddy" rel="me">YouTube</a>
@@ -546,19 +567,19 @@ body.gh-off #ghost{display:none}
 
 <section id="works">
   <div class="wrap">
-    <h2><small>Selected records</small>Hover a sleeve — the record slides out</h2>
-    <div class="shelf">
-      <a class="rec sig" href="https://www.youtube.com/watch?v=tT00vnqlZRA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/tT00vnqlZRA/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 01 · Film · 2026</span><div><h3>Kothay Pabo Tahare</h3><p>Domm — dir. Redoan Rony<br>Arrangement · mix &amp; master</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=_ivJlmSfdBk" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/_ivJlmSfdBk/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 02 · Album · 2025</span><div><h3>Porcelaina</h3><p>Tahsan Khan — incl. Prematal, Prakritik<br>Arrangement · mix &amp; master</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=LedapTiMZMM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/LedapTiMZMM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 03 · Drama · 2025</span><div><h3>Kajol Chokhe Valobasha</h3><p>Mahtim Shakib · <em>Emon Dine Tare Bola Jay</em><br>Composer · arrangement &amp; drama BGM by Sound Hacker</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=sl1DxUs-OfM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/sl1DxUs-OfM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 04 · Short film · 2025</span><div><h3>Ek Guccho Kadam</h3><p>Closeup Kache Ashar Golpo<br>Background score</p></div></div></a>
-      <a class="rec " href="https://music.apple.com/us/artist/ghuddy/689244959" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(gallery-studio-5.jpg)"></div><span class="play">▶</span><span class="no mono">No. 05 · Band · 2019</span><div><h3>Sharoni 71</h3><p>Ghuddy — Manchitro<br>MTV Chart Attack</p></div></div></a>
-      <a class="rec " href="https://www.facebook.com/share/r/1azamPThoq/" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(campaign-clearmen.jpg);background-position:center 18%;filter:brightness(.62) saturate(.95)"></div><span class="play">▶</span><span class="no mono">No. 06 · Jingle · 2025</span><div><h3>Pass Koro, Record Goro</h3><p>Clear Men — Guinness World Records campaign<br>Jingle &amp; BGM · composer, producer</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=aQSzM4uX22A" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/aQSzM4uX22A/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 07 · Cover · 2018</span><div><h3>Adho Raat</h3><p>Mahtim Shakib — Talat Mahmood cover<br>Music producer · Sound Hacker</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=A3vteLASpHA" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/A3vteLASpHA/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 08 · Cover · 2018</span><div><h3>Ekhon To Somoy Bhalobashar</h3><p>Mahtim &amp; Dimple — Colours FM 101.6<br>Music producer</p></div></div></a>
-      <a class="rec " href="https://www.youtube.com/watch?v=6riDQha4A4Q" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/6riDQha4A4Q/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 09 · Band · 2019</span><div><h3>Jongla Phul</h3><p>F Minor<br>Music producer</p></div></div></a>
-      <a class="rec wide" href="https://www.facebook.com/reel/1536204420399839" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(lux-sundori-komola-faces.jpg);background-position:center 30%;filter:brightness(.7) saturate(.95)"></div><span class="play">▶</span><span class="no mono">No. 10 · Jingle · LUX</span><div><h3>Sundori Komola</h3><p>LUX ft. Tahsan Khan &amp; Mithila<br>Jingle &amp; music arrangement · Sound Hacker — Shariful Islam Ghuddy &amp; MD Rizvi Rahman</p></div></div></a>
-      <a class="rec sig" href="https://www.youtube.com/watch?v=1Xt1w08hTgM" target="_blank" rel="noopener"><div class="disc"></div><div class="sleeve" style="background:linear-gradient(160deg,#3b2a12,#120d07)"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/1Xt1w08hTgM/mqdefault.jpg)"></div><span class="play">▶</span><span class="no mono">No. 11 · Flute rock · 2026</span><span class="tag mono">Soul + peace</span><div><h3>Biker's Paradise</h3><p>Game of Thrones — epic flute rock cover<br>Flute · music producer · Sound Hacker</p></div></div></a>
+    <h2><small>Selected works</small>Listen &amp; watch</h2>
+    <div class="works2">
+      <a class="wk feat" href="https://www.youtube.com/watch?v=tT00vnqlZRA" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/tT00vnqlZRA/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>01</span>Film · 2026</div><h3>Kothay Pabo Tahare</h3><p><em>Domm</em> — dir. Redoan Rony</p><p class="wk-r">Arrangement · mix &amp; master</p></div></a>
+      <a class="wk feat" href="https://www.youtube.com/watch?v=1Xt1w08hTgM" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/1Xt1w08hTgM/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>02</span>Flute rock · 2026</div><h3>Biker's Paradise</h3><p>Game of Thrones — epic flute rock cover</p><p class="wk-r">Flute · music producer</p></div></a>
+      <a class="wk" href="https://www.youtube.com/watch?v=_ivJlmSfdBk" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/_ivJlmSfdBk/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>03</span>Album · 2025</div><h3>Porcelaina</h3><p>Tahsan Khan — incl. Prematal, Prakritik</p><p class="wk-r">Arrangement · mix &amp; master</p></div></a>
+      <a class="wk" href="https://www.youtube.com/watch?v=LedapTiMZMM" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/LedapTiMZMM/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>04</span>Drama · 2025</div><h3>Kajol Chokhe Valobasha</h3><p>Mahtim Shakib · <em>Emon Dine Tare Bola Jay</em></p><p class="wk-r">Composer · arrangement &amp; BGM</p></div></a>
+      <a class="wk" href="https://www.facebook.com/share/r/1azamPThoq/" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(campaign-clearmen.jpg);background-position:center 20%"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>05</span>Jingle · 2025</div><h3>Pass Koro, Record Goro</h3><p>Clear Men — Guinness World Records™ campaign</p><p class="wk-r">Jingle &amp; BGM · composer, producer</p></div></a>
+      <a class="wk" href="https://www.facebook.com/reel/1536204420399839" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(lux-sundori-komola-faces.jpg);background-position:center 20%"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>06</span>Jingle · LUX</div><h3>Sundori Komola</h3><p>LUX ft. Tahsan Khan &amp; Mithila</p><p class="wk-r">Jingle &amp; arrangement · with MD Rizvi Rahman</p></div></a>
+      <a class="wk" href="https://www.youtube.com/watch?v=sl1DxUs-OfM" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/sl1DxUs-OfM/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>07</span>Short film · 2025</div><h3>Ek Guccho Kadam</h3><p>Closeup Kache Ashar Golpo</p><p class="wk-r">Background score</p></div></a>
+      <a class="wk" href="https://music.apple.com/us/artist/ghuddy/689244959" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(gallery-studio-5.jpg);background-position:center 20%"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>08</span>Band · 2019</div><h3>Sharoni 71</h3><p>Ghuddy — <em>Manchitro</em></p><p class="wk-r">MTV Chart Attack</p></div></a>
+      <a class="wk" href="https://www.youtube.com/watch?v=6riDQha4A4Q" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/6riDQha4A4Q/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>09</span>Band · 2019</div><h3>Jongla Phul</h3><p>F Minor</p><p class="wk-r">Music producer</p></div></a>
+      <a class="wk" href="https://www.youtube.com/watch?v=aQSzM4uX22A" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/aQSzM4uX22A/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>10</span>Cover · 2018</div><h3>Adho Raat</h3><p>Mahtim Shakib — Talat Mahmood cover</p><p class="wk-r">Music producer</p></div></a>
+      <a class="wk" href="https://www.youtube.com/watch?v=A3vteLASpHA" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/A3vteLASpHA/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>11</span>Cover · 2018</div><h3>Ekhon To Somoy Bhalobashar</h3><p>Mahtim &amp; Dimple — Colours FM 101.6</p><p class="wk-r">Music producer</p></div></a>
     </div>
     <h3 class="group">Highlights</h3>
     <div class="ach">
@@ -617,8 +638,7 @@ body.gh-off #ghost{display:none}
         <p>A Bangladeshi band formed in 2007, known for songs inspired by the Liberation War, the spirit of 1971 and the Bangla language. Shariful Islam Ghuddy is its founder, playing guitar and flute, alongside keyboardist Rizvi Rahman Adit.</p>
         <ul>
           <li>Debut album <em>Latai</em> (2011)</li>
-          <li>Second album of patriotic songs, released on Independence Day</li>
-          <li>Album <em>Manchitro (147570 Square Kilometers)</em> (2019) — <a href="https://music.apple.com/us/artist/ghuddy/689244959">Apple Music</a></li>
+          <li>Second album <em>Manchitro (147570 Square Kilometers)</em> — patriotic songs, launched March 2019 for Independence Day · <a href="https://music.apple.com/us/artist/ghuddy/689244959">Apple Music</a></li>
           <li>"Sharoni 71" received an award on <em>Airtel presents MTV Chart Attack</em></li>
         </ul>
         <p style="margin-top:14px"><a href="https://www.facebook.com/ghuddyband/">Ghuddy on Facebook →</a></p>
@@ -680,6 +700,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
     <h2><small>Press, TV &amp; online</small>In the Media</h2>
     <h3 class="group">TV interviews &amp; features</h3>
     <div class="tv">
+      <a class="tvc" href="https://www.youtube.com/watch?v=TWHS7ZxxmWs" target="_blank" rel="noopener"><div class="th" style="background-image:url(tv-atn-young-nite.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">ATN News · Nov 2019</span><b>"Young Nite" — studio interview on Humayun Ahmed's birthday</b><small>Live talk show on "Kothao Keu Nei" (Bangla)</small></div></a>
       <a class="tvc" href="https://www.youtube.com/watch?v=w5zM9uy7ZgQ" target="_blank" rel="noopener"><div class="th" style="background-image:url(tv-manchitro.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">Channel 24 · Mar 2019</span><b>Ghuddy launches the album <em>Manchitro</em></b><small>TV news report on the album launch (Bangla)</small></div></a>
       <a class="tvc" href="https://www.youtube.com/watch?v=GQfV9w1UFbY" target="_blank" rel="noopener"><div class="th" style="background-image:url(tv-kothao-keu-nei.jpg)"><span class="pl">▶</span></div><div class="tm"><span class="mono">Channel 24 · Nov 2019</span><b>"Kothao Keu Nei" — a song built from Humayun Ahmed's book titles</b><small>TV news report (Bangla)</small></div></a>
     </div>
@@ -810,14 +831,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
   var tick=false; addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(function(){tick=false;pick()})} },{passive:true});
   pick();
   // applause when someone opens or hovers a song
-  document.querySelectorAll('.rec').forEach(function(r){ r.addEventListener('mouseenter',clap); r.addEventListener('click',clap); r.addEventListener('focus',clap); });
+  document.querySelectorAll('.rec,.wk').forEach(function(r){ r.addEventListener('mouseenter',clap); r.addEventListener('click',clap); r.addEventListener('focus',clap); });
   var gw=document.querySelector('#guinness .btn'); if(gw) gw.addEventListener('mouseenter',clap);
 })();
 </script>
 <script>
 (function(){
   if(!('IntersectionObserver' in window)) return;
-  var els=document.querySelectorAll('section h2, .tracklist .tr, .voice, .rec, .gallery .g, .work, .card, .ach .a, .gw .in > div, .press li, .fact');
+  var els=document.querySelectorAll('section h2, .tracklist .tr, .voice, .wk, .gallery .g, .work, .card, .ach .a, .gw .in > div, .press li, .fact');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ var t=e.target; t.classList.add('on'); io.unobserve(t); setTimeout(function(){t.classList.remove('rv','on');t.style.transitionDelay='';},1400);} })},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el,i){ var r=el.getBoundingClientRect(); if(r.top<innerHeight) return; el.classList.add('rv'); el.style.transitionDelay=((i%4)*70)+'ms'; io.observe(el); });
 })();
