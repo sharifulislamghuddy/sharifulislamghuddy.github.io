@@ -301,8 +301,8 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 /* hero */
 .hx{position:relative;height:100vh;min-height:680px;overflow:hidden;isolation:isolate;background:#0b0a09;border:0;padding:0}
 .hx .layer{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06)}
-.hx .road{background-image:url(gallery-ride-6.jpg);background-position:20% 50%;filter:brightness(.62) saturate(.9) blur(5px)}
-.hx .studio{background-image:url(gallery-studio-2.jpg);background-position:50% 35%;filter:brightness(.55) saturate(.85) sepia(.12) blur(4px);clip-path:inset(0 0 0 calc(var(--mix)*100%))}
+.hx .road{background-image:url(hero-road.jpg);background-position:20% 50%}
+.hx .studio{background-image:url(hero-studio.jpg);background-position:50% 35%;clip-path:inset(0 0 0 calc(var(--mix)*100%));will-change:clip-path}
 .hx .seam{position:absolute;top:0;bottom:0;left:calc(var(--mix)*100%);width:2px;z-index:2;background:linear-gradient(transparent,var(--gold) 20%,var(--gold) 80%,transparent);box-shadow:0 0 18px 2px rgba(224,165,74,.55);pointer-events:none}
 .hx .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,10,9,.92) 0%,rgba(11,10,9,.55) 42%,rgba(11,10,9,.05) 75%),linear-gradient(0deg,#0b0a09 0%,rgba(11,10,9,0) 38%)}
 .hx .grain{position:absolute;inset:-50%;z-index:3;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(6) infinite}
@@ -316,16 +316,16 @@ h2 small{font-family:'Space Mono',monospace;letter-spacing:.14em}
 .hx .mantra em{font-style:italic;color:var(--gold)}
 .hx .mantra .l2 em{color:var(--ember)}
 .hx .roles2{margin-top:30px;color:var(--gold)}
-.hx .person{position:absolute;z-index:4;right:4vw;bottom:96px;height:min(74vh,660px);pointer-events:none;filter:drop-shadow(0 30px 60px rgba(0,0,0,.65));-webkit-mask-image:linear-gradient(180deg,#000 75%,transparent);mask-image:linear-gradient(180deg,#000 75%,transparent)}
+.hx .person{position:absolute;z-index:4;right:3vw;bottom:96px;height:min(74vh,660px);pointer-events:none;will-change:transform;filter:drop-shadow(0 30px 60px rgba(0,0,0,.65));-webkit-mask-image:linear-gradient(180deg,#000 75%,transparent);mask-image:linear-gradient(180deg,#000 75%,transparent)}
 .hx .deck{position:absolute;z-index:6;left:6vw;right:6vw;bottom:36px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:26px}
 .hx .vu{display:flex;gap:3px;align-items:flex-end;height:34px}
 .hx .vu i{width:5px;background:linear-gradient(0deg,#6f8f3a,#e0a54a 70%,var(--ember));border-radius:1px;height:20%}
 .hx .side{display:flex;align-items:center;gap:12px;color:var(--muted)}
 .hx .side.on{color:var(--ink)}
-.hx .fader{position:relative;height:56px;cursor:ew-resize;touch-action:none}
+.hx .fader{position:relative;height:56px;cursor:ew-resize;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.hx .fader:before{content:"";position:absolute;left:-14px;right:-14px;top:-14px;bottom:-14px}
 .hx .rail{position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;background:#1d1a17;border:1px solid #3a332b;border-radius:3px}
 .hx .ticks{position:absolute;left:0;right:0;top:50%;margin-top:12px;height:8px;background:repeating-linear-gradient(90deg,#4a4137 0 1px,transparent 1px 5%)}
-.hx .cap{position:absolute;top:50%;left:calc(var(--mix)*100%);width:34px;height:52px;margin:-26px 0 0 -17px;border-radius:5px;background:linear-gradient(180deg,#3a352f,#1b1815 45%,#2b2621);border:1px solid #574d42;box-shadow:0 8px 20px rgba(0,0,0,.6)}
+.hx .cap{position:absolute;top:50%;left:calc(var(--mix)*100%);will-change:left;width:34px;height:52px;margin:-26px 0 0 -17px;border-radius:5px;background:linear-gradient(180deg,#3a352f,#1b1815 45%,#2b2621);border:1px solid #574d42;box-shadow:0 8px 20px rgba(0,0,0,.6)}
 .hx .cap:after{content:"";position:absolute;left:4px;right:4px;top:50%;height:2px;background:var(--gold);box-shadow:0 0 8px var(--gold)}
 .hx .hint{position:absolute;left:50%;transform:translateX(-50%);top:-22px;color:var(--muted);white-space:nowrap}
 
@@ -613,7 +613,7 @@ body.gh-off #ghost{display:none}
     <div class="roles2 mono">Music composer &amp; producer · Sound engineer · Rider</div>
     <a class="gbadge" href="#guinness">🏆 <span>Music for a <b>Guinness World Records™</b> campaign · 2025</span></a>
   </div>
-  <img class="person" src="hero-person.png" alt="Shariful Islam Ghuddy" width="800" height="955">
+  <img class="person" src="hero-person.png" alt="Shariful Islam Ghuddy" width="810" height="1025" fetchpriority="high">
   <div class="deck">
     <div class="side mono" id="sideA"><div class="vu" id="vuA"></div>Studio</div>
     <div class="fader" id="fader" role="slider" aria-label="Studio to road crossfader" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="hint mono">⟵ soul · drag · peace ⟶</div><div class="rail"></div><div class="ticks"></div><div class="cap"></div></div>
@@ -728,7 +728,7 @@ body.gh-off #ghost{display:none}
       <li>Porcelaina Tahsan's Playlist (2025) — 7 songs incl. "Prematal", "Mon Karigor", "Prakritik"<span>Tahsan Khan · new arrangements of his popular songs, including "Prakritik", his final released song · music arrangement, mixing & mastering</span></li>
       <li>"Tomay Hrid Majhare Rakhbo" (2026)<span>Mahtim Shakib · arranger, sound engineer</span></li>
       <li>"Prarthona" (2024)<span>Parsha Mahjabeen & Mahtim Shakib · lyrics & composition with S M Faisal</span></li>
-      <li>"Prothom Premer Gaan" (2024)<span>Parsha Mahjabeen · mastering engineer</span></li>
+      <li><a href="https://open.spotify.com/track/7bb5xK0Yqxfzu2VlyglpQs" target="_blank" rel="noopener">"Prothom Premer Gaan"</a> (2024)<span>Parsha Mahjabeen &amp; Palash Shakil · mastering engineer, arrangement by Sound Hacker · credited on Spotify</span></li>
       <li>"Banglar Meyera" (2024) · "Assamese Folk Medley" (2023)<span>F Minor · producer & arranger · composer</span></li>
       <li>"Hachukni Bwrwima" (2025)<span>Payel Tripura · mastering engineer</span></li>
       <li>"Firbo Kobe" (2023)<span>Naim Imran Sharot · producer</span></li>
@@ -739,7 +739,6 @@ body.gh-off #ghost{display:none}
       <li>"Ami Chai Tomake", "Buker Majhe", "Sedin Fagune" ft. Priyanka Gope<span>Yousuf Ahmed Khan</span></li>
       <li>"Kothao Keu Nei" (2019) — tribute to Humayun Ahmed<span>Tasnim Anika & Yousuf Ahmed Khan · built from the titles of 35 of his books</span></li>
       <li>"Kok Riwi Ano" · "Hochpanar Sobono Puri"<span>Payel Tripura (Tripura language) · Poni Chakma (Chakma language)</span></li>
-      <li><a href="https://open.spotify.com/track/7bb5xK0Yqxfzu2VlyglpQs" target="_blank" rel="noopener">"Prothom Premer Gaan"</a> (2024)<span>Parsha Mahjabeen Purnee &amp; Palash Shakil · mastering engineer, arrangement by Sound Hacker · credited on Spotify</span></li>
       <li>"Amaro Porano Jaha Chay"<span>Parsha Mahjabeen · Rabindra Sangeet</span></li>
     </ul>
 
@@ -891,20 +890,23 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
 
 <script>
 (function(){
-  var root=document.documentElement, fader=document.getElementById('fader'); if(!fader) return;
-  var mix=.5, auto=true, t0=performance.now();
-  function set(m){mix=Math.max(0,Math.min(1,m));root.style.setProperty('--mix',mix);
-    var a=Math.min(1,Math.max(.22,1.5-mix*1.6)), b=Math.min(1,Math.max(.22,mix*1.6-.1));
-    document.querySelector('.hx .l1').style.opacity=a;document.querySelector('.hx .l2').style.opacity=b;
-    document.getElementById('sideA').classList.toggle('on',mix<.5);document.getElementById('sideB').classList.toggle('on',mix>=.5);
-    fader.setAttribute('aria-valuenow',Math.round(mix*100));}
-  set(mix);
-  function from(e){var r=fader.getBoundingClientRect();set((e.clientX-r.left)/r.width)}
-  var drag=false;
-  fader.addEventListener('pointerdown',function(e){drag=true;auto=false;fader.setPointerCapture(e.pointerId);from(e)});
-  fader.addEventListener('pointermove',function(e){if(drag)from(e)});
-  fader.addEventListener('pointerup',function(){drag=false});
-  fader.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){auto=false;set(mix-.05)}if(e.key==='ArrowRight'){auto=false;set(mix+.05)}});
+  var hx=document.querySelector('.hx'), fader=document.getElementById('fader'); if(!fader) return;
+  var L1=document.querySelector('.hx .l1'), L2=document.querySelector('.hx .l2'), SA=document.getElementById('sideA'), SB=document.getElementById('sideB');
+  var mix=.5, target=.5, shown=-1, auto=true, t0=performance.now();
+  function apply(m){if(Math.abs(m-shown)<.0005)return; shown=m; hx.style.setProperty('--mix',m.toFixed(4));
+    L1.style.opacity=Math.min(1,Math.max(.22,1.5-m*1.6)); L2.style.opacity=Math.min(1,Math.max(.22,m*1.6-.1));
+    SA.classList.toggle('on',m<.5); SB.classList.toggle('on',m>=.5);
+    fader.setAttribute('aria-valuenow',Math.round(m*100));}
+  function set(m){target=Math.max(0,Math.min(1,m))}
+  apply(mix);
+  var drag=false, rect=null;
+  function from(e){if(!rect)rect=fader.getBoundingClientRect(); set((e.clientX-rect.left)/rect.width)}
+  function end(){drag=false;rect=null}
+  fader.addEventListener('pointerdown',function(e){drag=true;auto=false;rect=fader.getBoundingClientRect();try{fader.setPointerCapture(e.pointerId)}catch(_){ }from(e);e.preventDefault()});
+  fader.addEventListener('pointermove',function(e){if(drag){from(e);e.preventDefault()}});
+  ['pointerup','pointercancel','lostpointercapture'].forEach(function(n){fader.addEventListener(n,end)});
+  fader.addEventListener('touchmove',function(e){if(drag)e.preventDefault()},{passive:false});
+  fader.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){auto=false;set(target-.05)}if(e.key==='ArrowRight'){auto=false;set(target+.05)}});
   ['vuA','vuB'].forEach(function(id){document.getElementById(id).innerHTML='<i></i><i></i><i></i><i></i><i></i><i></i>'});
   var cv=document.getElementById('wave'),cx=cv.getContext('2d'),mx=.5;
   addEventListener('pointermove',function(e){mx=e.clientX/innerWidth});
@@ -915,6 +917,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
   function frame(now){
     var t=(now-t0)/1000;
     if(auto&&!reduce&&t>1.6&&t<5.6)set(.5+Math.sin((t-1.6)/4*Math.PI)*.3);
+    mix+=(target-mix)*(drag?.35:.18); if(Math.abs(target-mix)<.0005)mix=target; apply(mix);
     if(scrollY<innerHeight){
       var W=cv.width,H=cv.height;cx.clearRect(0,0,W,H);
       for(var k=0;k<2;k++){cx.beginPath();
