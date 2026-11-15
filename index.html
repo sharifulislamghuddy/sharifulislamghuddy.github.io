@@ -518,6 +518,21 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 .rl-routes li b{font-weight:500;color:var(--ink,#f4ece0);font-size:17px}.rl-routes li span{font-size:14px;color:rgba(244,236,224,.62)}
 .rl-dist{font-size:13px;line-height:1.7;color:rgba(244,236,224,.5);margin:0}
 @media(max-width:900px){.ridelog{grid-template-columns:1fr;padding:24px 20px;gap:22px}.rl-stats{grid-template-columns:repeat(3,1fr);gap:10px}.rl-stats b{font-size:34px}.rl-stats b small{font-size:14px}.rl-stats span{font-size:9.5px;letter-spacing:.1em}}
+.bac-lead{max-width:640px;color:rgba(243,232,216,.7);font-size:15px;line-height:1.6;margin:-4px 0 22px}.bac-lead b{color:var(--gold,#e0a54a);font-weight:500}
+.bagrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:0 0 56px}
+.bac{position:relative;border:1px solid rgba(243,232,216,.12);border-radius:16px;padding:20px 20px 18px;background:rgba(243,232,216,.025);transition:border-color .2s,background .2s}
+.bac.on{border-color:rgba(224,165,74,.55);background:rgba(224,165,74,.06)}
+.bac-k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,232,216,.5)}.bac-k span{color:var(--gold,#e0a54a);margin-right:10px}
+.bac h4{font-size:20px;margin:10px 0 2px;font-weight:500}.bac p{margin:0;color:rgba(243,232,216,.62);font-size:14px}
+.bac-ctl{display:flex;align-items:center;gap:12px;margin-top:16px}
+.bac-p{flex:none;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:var(--gold,#e0a54a);color:#120e0b;display:grid;place-items:center}
+.bac-p svg{width:18px;height:18px;fill:currentColor}.bac-p .i-pause{display:none}.bac.on .bac-p .i-play{display:none}.bac.on .bac-p .i-pause{display:block}
+.bac-sw{display:flex;border:1px solid rgba(243,232,216,.2);border-radius:999px;padding:3px;gap:2px}
+.bac-sw button{border:0;background:none;color:rgba(243,232,216,.6);font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:999px;cursor:pointer}
+.bac-sw button.on{background:rgba(243,232,216,.92);color:#120e0b}
+.bac-sw button[data-v=before].on{background:rgba(216,67,46,.9);color:#fff}
+.bac-bar{display:block;height:2px;background:rgba(243,232,216,.12);border-radius:2px;margin-top:16px;overflow:hidden;cursor:pointer}.bac-bar i{display:block;height:100%;width:0;background:var(--gold,#e0a54a)}
+@media(max-width:900px){.bagrid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.bagrid{grid-template-columns:1fr}}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -758,6 +773,34 @@ body.gh-off #ghost{display:none}
       <a class="wk" href="https://www.youtube.com/watch?v=A3vteLASpHA" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(https://i.ytimg.com/vi/A3vteLASpHA/hqdefault.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>10</span>Cover · 2018</div><h3>Ekhon To Somoy Bhalobashar</h3><p>Mahtim &amp; Dimple — Colours FM 101.6</p><p class="wk-r">Music producer</p></div></a>
       <a class="wk half" href="https://www.youtube.com/watch?v=HCLIDYudQQY" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(work-kothao-keu-nei.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>11</span>Sound Hacker · 2019</div><h3>Kothao Keu Nei</h3><p>Tasnim Anika &amp; Yousuf Ahmed Khan — tribute to Humayun Ahmed</p><p class="wk-r">Composer (with Md Rizvi Rahman) · mix &amp; master</p></div></a>
       <a class="wk half" href="https://www.youtube.com/watch?v=iMBDZ2Za05Y" target="_blank" rel="noopener"><div class="wk-th" style="background-image:url(work-mor-priya-hobe.jpg);background-position:center"><span class="wk-pl">▶</span></div><div class="wk-tx"><div class="wk-k mono"><span>12</span>Nazrul Sangeet · 2020</div><h3>Mor Priya Hobe</h3><p>Ustad Yeakub Ali Khan, Yousuf Ahmed Khan &amp; Imtiaz Ahmed Khan (Abhishek)</p><p class="wk-r">Music arrangement (with Md Rizvi Rahman) · Sound Hacker</p></div></a>
+    </div>
+    <h3 class="group" id="mixroom">Before / after — in the mix room</h3>
+    <p class="bac-lead">Same moment of the song: the raw recording vs. the final mix &amp; master by Shariful Islam Ghuddy. Volumes are matched, so you hear the mix — not just “louder”. Press play, then flip between <b>Before</b> and <b>After</b>.</p>
+    <div class="bagrid">
+      <div class="bac" data-k="kajol"><div class="bac-k mono"><span>01</span>Drama song</div><h4>Kajol Chokhe Valobasha</h4><p>Mahtim Shakib</p>
+        <div class="bac-ctl"><button class="bac-p" type="button" aria-label="Play Kajol Chokhe Valobasha"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+          <div class="bac-sw mono" role="group" aria-label="Before or after"><button type="button" data-v="before" class="on">Before</button><button type="button" data-v="after">After</button></div></div>
+        <i class="bac-bar"><i></i></i></div>
+      <div class="bac" data-k="prematal"><div class="bac-k mono"><span>02</span>Porcelaina playlist</div><h4>Prematal</h4><p>Tahsan Khan</p>
+        <div class="bac-ctl"><button class="bac-p" type="button" aria-label="Play Prematal"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+          <div class="bac-sw mono" role="group" aria-label="Before or after"><button type="button" data-v="before" class="on">Before</button><button type="button" data-v="after">After</button></div></div>
+        <i class="bac-bar"><i></i></i></div>
+      <div class="bac" data-k="passkoro"><div class="bac-k mono"><span>03</span>Jingle</div><h4>Pass Koro, Record Goro</h4><p>Clear Men × Guinness</p>
+        <div class="bac-ctl"><button class="bac-p" type="button" aria-label="Play Pass Koro, Record Goro"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+          <div class="bac-sw mono" role="group" aria-label="Before or after"><button type="button" data-v="before" class="on">Before</button><button type="button" data-v="after">After</button></div></div>
+        <i class="bac-bar"><i></i></i></div>
+      <div class="bac" data-k="amichai"><div class="bac-k mono"><span>04</span>Single</div><h4>Ami Chai Tomake</h4><p>Yousuf Ahmed Khan</p>
+        <div class="bac-ctl"><button class="bac-p" type="button" aria-label="Play Ami Chai Tomake"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+          <div class="bac-sw mono" role="group" aria-label="Before or after"><button type="button" data-v="before" class="on">Before</button><button type="button" data-v="after">After</button></div></div>
+        <i class="bac-bar"><i></i></i></div>
+      <div class="bac" data-k="shure"><div class="bac-k mono"><span>05</span>Band</div><h4>Shure Shure Tumi Tui</h4><p>Band Revive</p>
+        <div class="bac-ctl"><button class="bac-p" type="button" aria-label="Play Shure Shure Tumi Tui"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+          <div class="bac-sw mono" role="group" aria-label="Before or after"><button type="button" data-v="before" class="on">Before</button><button type="button" data-v="after">After</button></div></div>
+        <i class="bac-bar"><i></i></i></div>
+      <div class="bac" data-k="jongla"><div class="bac-k mono"><span>06</span>Band</div><h4>Jongla Phul</h4><p>F Minor</p>
+        <div class="bac-ctl"><button class="bac-p" type="button" aria-label="Play Jongla Phul"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+          <div class="bac-sw mono" role="group" aria-label="Before or after"><button type="button" data-v="before" class="on">Before</button><button type="button" data-v="after">After</button></div></div>
+        <i class="bac-bar"><i></i></i></div>
     </div>
     <h3 class="group">Highlights</h3>
     <div class="ach">
@@ -1019,6 +1062,27 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
   a.addEventListener('pause',function(){box.classList.remove('on');btn.setAttribute('aria-label','Play showreel');window.__reelLvl=0});
   a.addEventListener('ended',function(){a.currentTime=0;now.textContent='Film · Tahsan · LUX · Clear Men · Ghuddy · Ride';pos.style.width='0'});
   a.addEventListener('timeupdate',function(){var t=a.currentTime,l=T[0][1];for(var i=0;i<T.length;i++)if(t>=T[i][0])l=T[i][1];if(now.textContent!==l)now.textContent=l;pos.style.width=(t/(a.duration||83.9)*100)+'%'});
+})();
+</script>
+
+<script>
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.bac')); if(!cards.length)return;
+  var reel=document.getElementById('reelA'), cur=null;
+  function stopAll(except){cards.forEach(function(c){if(c!==except&&c._a){c._a.before.pause();c._a.after.pause();c.classList.remove('on')}})}
+  cards.forEach(function(c){
+    var k=c.getAttribute('data-k'), v='before', bar=c.querySelector('.bac-bar i'), btns=c.querySelectorAll('.bac-sw button');
+    function ensure(){if(c._a)return c._a;var A={before:new Audio('ba-'+k+'-before.mp3'),after:new Audio('ba-'+k+'-after.mp3')};
+      ['before','after'].forEach(function(n){var x=A[n];x.preload='auto';x.addEventListener('timeupdate',function(){if(n===v)bar.style.width=(x.currentTime/(x.duration||30)*100)+'%'});x.addEventListener('ended',function(){if(n===v){c.classList.remove('on');A.before.currentTime=A.after.currentTime=0;bar.style.width='0'}})});
+      c._a=A;return A}
+    c.querySelector('.bac-p').addEventListener('click',function(){var A=ensure(),x=A[v];
+      if(x.paused){stopAll(c);if(reel&&!reel.paused)reel.pause();x.play();c.classList.add('on')}else{x.pause();c.classList.remove('on')}});
+    [].forEach.call(btns,function(b){b.addEventListener('click',function(){var nv=b.getAttribute('data-v');if(nv===v)return;
+      [].forEach.call(btns,function(o){o.classList.toggle('on',o===b)});var A=ensure(),from=A[v],to=A[nv],playing=!from.paused;
+      to.currentTime=from.currentTime;v=nv;if(playing){from.pause();to.play()}})});
+    c.querySelector('.bac-bar').addEventListener('click',function(e){var A=ensure(),x=A[v],r=this.getBoundingClientRect();if(x.duration){x.currentTime=(e.clientX-r.left)/r.width*x.duration;bar.style.width=(x.currentTime/x.duration*100)+'%'}});
+  });
+  if(reel)reel.addEventListener('play',function(){stopAll(null)});
 })();
 </script>
 
