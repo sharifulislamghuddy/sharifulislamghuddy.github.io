@@ -191,6 +191,18 @@
     "@type": "Organization",
     "name": "Glee Network"
    }
+  },
+  {
+   "@type": "AudioObject",
+   "@id": "https://sharifulislamghuddy.com/#showreel",
+   "name": "Shariful Islam Ghuddy — Showreel",
+   "contentUrl": "https://sharifulislamghuddy.com/showreel.mp3",
+   "encodingFormat": "audio/mpeg",
+   "duration": "PT1M24S",
+   "creator": {
+    "@id": "https://sharifulislamghuddy.com/#person"
+   },
+   "description": "Excerpts from Kothay Pabo Tahare (Domm), Porcelaina (Tahsan Khan), Sundori Komola (LUX), Pass Koro, Record Goro (Clear Men) and Sharoni 71 (Ghuddy) and Biker's Paradise."
   }
  ]
 }
@@ -483,6 +495,17 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 .gallery.stage2{grid-template-columns:1.45fr 1fr}.gallery.stage2 a.g{aspect-ratio:auto;height:420px}
 .tv.rides{grid-template-columns:repeat(3,1fr)}.tv.rides .pl{left:auto;top:auto;right:16px;bottom:16px;margin:0}
 @media(max-width:900px){.gallery.stage2{grid-template-columns:1fr}.gallery.stage2 a.g{height:auto;aspect-ratio:4/3}.tv.rides{grid-template-columns:1fr}}
+.reel{display:flex;align-items:center;gap:14px;margin-top:18px;max-width:430px}
+.reel .rp{flex:none;width:52px;height:52px;border-radius:50%;border:0;cursor:pointer;background:var(--gold,#e0a54a);color:#120e0b;display:grid;place-items:center;box-shadow:0 0 0 0 rgba(224,165,74,.5);transition:transform .2s}
+.reel .rp:hover{transform:scale(1.06)}.reel .rp svg{width:22px;height:22px;fill:currentColor}
+.reel .rp .i-pause{display:none}.reel.on .rp .i-play{display:none}.reel.on .rp .i-pause{display:block}
+.reel.on .rp{animation:rpulse 1.6s ease-out infinite}@keyframes rpulse{0%{box-shadow:0 0 0 0 rgba(224,165,74,.45)}100%{box-shadow:0 0 0 16px rgba(224,165,74,0)}}
+.reel .rt{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}
+.reel .rt b{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#e0a54a);font-weight:500}
+.reel .rt span{font-size:14px;color:rgba(244,236,224,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reel .rbar{display:block;height:2px;background:rgba(244,236,224,.15);border-radius:2px;margin-top:5px;overflow:hidden}
+.reel .rbar i{display:block;height:100%;width:0;background:var(--gold,#e0a54a)}
+@media(max-width:900px){.reel{margin-top:14px}.reel .rp{width:46px;height:46px}.reel .rt span{font-size:13px}}
 /* achievements */
 .ach{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
 .ach .a{position:relative;border:1px solid #4a3d2a;border-radius:14px;padding:26px;background:linear-gradient(140deg,rgba(224,165,74,.10),rgba(23,21,19,.6))}
@@ -496,7 +519,7 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
   .hx .person{right:50%;transform:translateX(50%);top:64px;bottom:auto;height:min(46svh,400px);width:auto;opacity:1;
     -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
   .hx .shade{background:linear-gradient(0deg,#0b0a09 0%,rgba(11,10,9,.92) 38%,rgba(11,10,9,.35) 62%,rgba(11,10,9,.15) 100%)}
-  .hx .title{top:auto;bottom:118px;transform:none;left:22px;right:22px}
+  .hx .title{top:auto;bottom:128px;transform:none;left:22px;right:22px}
   .hx .name{font-size:36px}
   .hx .mantra{font-size:24px;margin-top:16px}
   .hx .roles2{margin-top:14px;font-size:10px}
@@ -617,6 +640,11 @@ body.gh-off #ghost{display:none}
     <p class="mantra"><span class="l1">Music is my <em>soul.</em></span><span class="l2">Riding is my <em>peace.</em></span></p>
     <div class="roles2 mono">Music composer &amp; producer · Sound engineer · Rider</div>
     <a class="gbadge" href="#guinness">🏆 <span>Music for a <b>Guinness World Records™</b> campaign · 2025</span></a>
+    <div class="reel" id="reel">
+      <button class="rp" id="reelBtn" type="button" aria-label="Play showreel"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z"/><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+      <div class="rt"><b class="mono">Showreel · 1:24</b><span id="reelNow">Film · Tahsan · LUX · Clear Men · Ghuddy · Ride</span><i class="rbar"><i id="reelPos"></i></i></div>
+      <audio id="reelA" src="showreel.mp3" preload="none"></audio>
+    </div>
   </div>
   <img class="person" src="hero-person.png" alt="Shariful Islam Ghuddy" width="810" height="1025" fetchpriority="high">
   <div class="deck">
@@ -937,10 +965,30 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
           if(x)cx.lineTo(x,y);else cx.moveTo(x,y)}
         cx.strokeStyle=k?'rgba(216,67,46,.55)':'rgba(224,165,74,.95)';cx.lineWidth=(k?1:1.6)*devicePixelRatio;cx.stroke()}
       var A=document.querySelectorAll('#vuA i'),B=document.querySelectorAll('#vuB i');
-      for(var i=0;i<6;i++){A[i].style.height=(20+Math.abs(Math.sin(t*7+i*1.3))*80*(1-mix))+'%';B[i].style.height=(20+Math.abs(Math.sin(t*6.3+i*1.7))*80*mix)+'%'}
+      var lv=window.__reelLvl||0; for(var i=0;i<6;i++){var ja=Math.abs(Math.sin(t*7+i*1.3)),jb=Math.abs(Math.sin(t*6.3+i*1.7)); A[i].style.height=(lv?15+lv*85*(.55+.45*ja):20+ja*80*(1-mix))+'%';B[i].style.height=(lv?15+lv*85*(.55+.45*jb):20+jb*80*mix)+'%'}
     }
     requestAnimationFrame(frame)}
   requestAnimationFrame(frame);
+})();
+</script>
+
+<script>
+(function(){
+  var box=document.getElementById('reel'),a=document.getElementById('reelA'),btn=document.getElementById('reelBtn'),now=document.getElementById('reelNow'),pos=document.getElementById('reelPos');
+  if(!box||!a)return;
+  var T=[[0,'Kothay Pabo Tahare — film Domm'],[14.2,'Porcelaina — Tahsan Khan'],[29.1,'Sundori Komola — LUX jingle'],[41.6,'Pass Koro, Record Goro — Clear Men × Guinness'],[54.6,'Sharoni 71 — Ghuddy'],[67.4,"Biker's Paradise — flute rock"]];
+  var ctx,an,buf; window.__reelLvl=0;
+  function meter(){if(!an)return;an.getByteTimeDomainData(buf);var m=0;for(var i=0;i<buf.length;i++){var v=Math.abs(buf[i]-128);if(v>m)m=v}window.__reelLvl=a.paused?0:Math.min(1,m/90);requestAnimationFrame(meter)}
+  btn.addEventListener('click',function(){
+    if(a.paused){
+      try{if(!ctx){var C=window.AudioContext||window.webkitAudioContext;ctx=new C();var src=ctx.createMediaElementSource(a);an=ctx.createAnalyser();an.fftSize=512;buf=new Uint8Array(an.fftSize);src.connect(an);an.connect(ctx.destination);meter()}if(ctx.state==='suspended')ctx.resume()}catch(e){}
+      a.play();
+    } else a.pause();
+  });
+  a.addEventListener('play',function(){box.classList.add('on');btn.setAttribute('aria-label','Pause showreel')});
+  a.addEventListener('pause',function(){box.classList.remove('on');btn.setAttribute('aria-label','Play showreel');window.__reelLvl=0});
+  a.addEventListener('ended',function(){a.currentTime=0;now.textContent='Film · Tahsan · LUX · Clear Men · Ghuddy · Ride';pos.style.width='0'});
+  a.addEventListener('timeupdate',function(){var t=a.currentTime,l=T[0][1];for(var i=0;i<T.length;i++)if(t>=T[i][0])l=T[i][1];if(now.textContent!==l)now.textContent=l;pos.style.width=(t/(a.duration||83.9)*100)+'%'});
 })();
 </script>
 
