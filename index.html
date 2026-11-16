@@ -519,6 +519,28 @@ footer.fx{padding:70px 0 34px;text-align:left;border-top:1px solid var(--line);b
 .rl-routes li b{font-weight:500;color:var(--ink,#f4ece0);font-size:17px}.rl-routes li span{font-size:14px;color:rgba(244,236,224,.62)}
 .rl-dist{font-size:13px;line-height:1.7;color:rgba(244,236,224,.5);margin:0}
 @media(max-width:900px){.ridelog{grid-template-columns:1fr;padding:24px 20px;gap:22px}.rl-stats{grid-template-columns:repeat(3,1fr);gap:10px}.rl-stats b{font-size:34px}.rl-stats b small{font-size:14px}.rl-stats span{font-size:9.5px;letter-spacing:.1em}}
+/* ride log — photo + animated stats */
+h3.group .rl-who{color:var(--gold,#e0a54a)}h3.group .rl-dash{color:var(--gold,#e0a54a);opacity:.7;margin:0 .35em;font-weight:400}
+.ridelog.has-photo{grid-template-columns:minmax(220px,280px) auto 1.35fr;align-items:center}
+.rl-photo{position:relative;margin:0;aspect-ratio:1103/1877;border-radius:14px;overflow:hidden;border:1px solid rgba(224,165,74,.28);box-shadow:0 24px 50px -22px rgba(0,0,0,.85);z-index:2}
+.rl-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.rl-photo i{position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,215,150,.22) 50%,transparent 65%);transform:translateX(-120%);pointer-events:none}
+.ridelog.has-photo .rl-stats{position:relative;z-index:1}
+.rl-stats b i.rl-n{font-style:normal}
+.ridelog.has-photo .rl-stats b{text-shadow:0 0 22px rgba(224,165,74,.22)}
+.ridelog.rl-anim .rl-photo{opacity:0;transform:scale(.94);filter:brightness(.4) saturate(.6);transition:opacity 1s ease,transform 1.4s cubic-bezier(.2,.7,.2,1),filter 1.6s ease,box-shadow 1.6s ease}
+.ridelog.rl-anim .rl-photo img{transform:scale(1.12);transition:transform 6s cubic-bezier(.2,.7,.2,1)}
+.ridelog.rl-anim .rl-stats>div{opacity:0;transform:translateX(-150px) scale(.85);filter:blur(8px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.16,.8,.24,1),filter .9s ease}
+.ridelog.rl-anim .rl-stats>div:nth-child(1){transition-delay:.9s}.ridelog.rl-anim .rl-stats>div:nth-child(2){transition-delay:1.25s}.ridelog.rl-anim .rl-stats>div:nth-child(3){transition-delay:1.6s}
+.ridelog.rl-anim .rl-body{opacity:0;transform:translateY(18px);transition:opacity 1s ease 1.9s,transform 1s ease 1.9s}
+.ridelog.rl-anim.rl-in .rl-photo{opacity:1;transform:none;filter:none;box-shadow:0 0 38px -6px rgba(224,165,74,.35),0 24px 50px -22px rgba(0,0,0,.85)}
+.ridelog.rl-anim.rl-in .rl-photo img{transform:none}
+.ridelog.rl-anim.rl-in .rl-photo i{animation:rlShine 1.6s .6s ease-out forwards}
+.ridelog.rl-anim.rl-in .rl-stats>div,.ridelog.rl-anim.rl-in .rl-body{opacity:1;transform:none;filter:none}
+@keyframes rlShine{to{transform:translateX(120%)}}
+@media(max-width:900px){.ridelog.has-photo{grid-template-columns:1fr}.rl-photo{width:100%;max-width:340px;justify-self:center}.ridelog.rl-anim .rl-stats>div{transform:translateY(-60px) scale(.85)}}
+@media(max-width:520px){h3.group .rl-dash{display:none}h3.group .rl-who{display:block;margin-top:6px}}
+@media(prefers-reduced-motion:reduce){.ridelog.rl-anim .rl-photo,.ridelog.rl-anim .rl-photo img,.ridelog.rl-anim .rl-stats>div,.ridelog.rl-anim .rl-body{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
 #mixroom{background:radial-gradient(1200px 500px at 15% 0%,rgba(224,165,74,.07),transparent 60%),radial-gradient(900px 500px at 100% 100%,rgba(216,67,46,.06),transparent 60%)}
 .mr-intro{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end;margin:-6px 0 30px}
 .mr-intro p{margin:0;font-size:17px;line-height:1.65;color:rgba(243,232,216,.75);max-width:640px}.mr-intro b{font-weight:500}.mr-intro b.r{color:#e8664f}.mr-intro b.g{color:var(--gold,#e0a54a)}
@@ -970,12 +992,13 @@ body.gh-off #ghost{display:none}
       <a class="g" href="gallery-stage-channeli.jpg" data-cap="Ghuddy at Channel i Band Fest 2016"><img src="gallery-stage-channeli.jpg" alt="Ghuddy band performing at Channel i Band Fest 2016" loading="lazy" width="1244" height="696"><span>Channel i Band Fest 2016</span></a>
       <a class="g" href="gallery-stage-satv.jpg" data-cap="Ghuddy at SATV Live Studio"><img src="gallery-stage-satv.jpg" alt="Ghuddy band members at SATV Live Studio" loading="lazy" width="1600" height="1039" style="object-position:70% 40%"><span>SATV Live Studio</span></a>
     </div>
-    <h3 class="group">Ride log</h3>
-    <div class="ridelog">
+    <h3 class="group">Ride log<span class="rl-dash">—</span><span class="rl-who">Rider Ghuddy</span></h3>
+    <div class="ridelog has-photo" id="ridelog">
+      <figure class="rl-photo"><picture><source srcset="ride-log-ghuddy.webp" type="image/webp"><img src="ride-log-ghuddy.jpg" alt="Shariful Islam Ghuddy (Rider Ghuddy) on his Honda ADV 150" loading="lazy" width="1103" height="1877"></picture><i aria-hidden="true"></i></figure>
       <div class="rl-stats">
-        <div><b>15</b><span class="mono">districts of Bangladesh</span></div>
-        <div><b>3</b><span class="mono">countries ridden</span></div>
-        <div><b>~1,000<small>km</small></b><span class="mono">across Bali</span></div>
+        <div><b data-to="15">15</b><span class="mono">districts of Bangladesh</span></div>
+        <div><b data-to="3">3</b><span class="mono">countries ridden</span></div>
+        <div><b>~<i class="rl-n" data-to="1000">1,000</i><small>km</small></b><span class="mono">across Bali</span></div>
       </div>
       <div class="rl-body">
         <p class="rl-bike mono">Ride · <b>Honda ADV 150</b></p>
@@ -1209,6 +1232,24 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.get
   var els=document.querySelectorAll('section h2, .tracklist .tr, .voice, .wk, .gallery .g, .work, .card, .ach .a, .gw .in > div, .press li, .fact');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ var t=e.target; t.classList.add('on'); io.unobserve(t); setTimeout(function(){t.classList.remove('rv','on');t.style.transitionDelay='';},1400);} })},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el,i){ var r=el.getBoundingClientRect(); if(r.top<innerHeight) return; el.classList.add('rv'); el.style.transitionDelay=((i%4)*70)+'ms'; io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var box=document.getElementById('ridelog'); if(!box||!('IntersectionObserver' in window)) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(box.getBoundingClientRect().top<innerHeight*.85) return;
+  box.classList.add('rl-anim');
+  var nums=box.querySelectorAll('[data-to]');
+  function fmt(n){return n.toLocaleString('en-US')}
+  nums.forEach(function(el){el.textContent='0'});
+  var done=false;
+  function go(){ if(done) return; done=true; box.classList.add('rl-in'); removeEventListener('scroll',chk);
+    nums.forEach(function(el,i){ var to=+el.dataset.to; setTimeout(function(){ var st=null; function step(t){ if(!st) st=t; var p=Math.min((t-st)/1600,1); el.textContent=fmt(Math.round(to*(1-Math.pow(1-p,3)))); if(p<1) requestAnimationFrame(step); } requestAnimationFrame(step); setTimeout(function(){el.textContent=fmt(to)},2200); },900+i*350); });
+  }
+  function chk(){ var r=box.getBoundingClientRect(); if(r.top<innerHeight*.75 && r.bottom>0) go(); }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); go(); } })},{rootMargin:'0px 0px -25% 0px'});
+  io.observe(box); addEventListener('scroll',chk,{passive:true});
 })();
 </script>
 </body>
