@@ -129,7 +129,10 @@
    "award": "No. 1 Song of the Week, Airtel presents MTV Chart Attack (Season 1, Episode 12, 2014) for \"Sharoni 71\""
   },
   {
-   "@type": "Organization",
+   "@type": [
+    "Organization",
+    "LocalBusiness"
+   ],
    "@id": "https://sharifulislamghuddy.com/#soundhacker",
    "name": "Sound Hacker",
    "alternateName": "সাউন্ড হ্যাকার",
@@ -160,7 +163,13 @@
     "https://www.facebook.com/soundhacker/",
     "https://www.youtube.com/@Soundhackerbd",
     "https://www.wikidata.org/wiki/Q142083053"
-   ]
+   ],
+   "url": "https://sharifulislamghuddy.com/#ghuddy",
+   "openingHours": "Sa-Th 11:00-23:00",
+   "image": "https://sharifulislamghuddy.com/studio-film-poster.jpg",
+   "video": {
+    "@id": "https://sharifulislamghuddy.com/#studio-film"
+   }
   },
   {
    "@type": "MusicRecording",
@@ -236,6 +245,36 @@
     "@id": "https://sharifulislamghuddy.com/#person"
    },
    "description": "Excerpts from Kothay Pabo Tahare (Domm), Porcelaina (Tahsan Khan), Sundori Komola (LUX), Pass Koro, Record Goro (Clear Men) and Sharoni 71 (Ghuddy) and Biker's Paradise."
+  },
+  {
+   "@type": "VideoObject",
+   "@id": "https://sharifulislamghuddy.com/#studio-film",
+   "name": "Inside the Sound Hacker Studio, Dhaka",
+   "description": "A one-minute film inside Sound Hacker, the Dhaka audio production house and recording studio founded by Shariful Islam Ghuddy and Md Rizvi Rahman: recording, mixing and mastering at 67/4 Pioneer Road, Kakrail.",
+   "thumbnailUrl": "https://sharifulislamghuddy.com/studio-film-poster.jpg",
+   "contentUrl": "https://sharifulislamghuddy.com/studio-film.mp4",
+   "uploadDate": "2026-11-17",
+   "duration": "PT59S",
+   "productionCompany": {
+    "@id": "https://sharifulislamghuddy.com/#soundhacker"
+   },
+   "about": {
+    "@id": "https://sharifulislamghuddy.com/#soundhacker"
+   },
+   "contributor": [
+    {
+     "@id": "https://sharifulislamghuddy.com/#person"
+    },
+    {
+     "@type": "Person",
+     "name": "Md Rizvi Rahman"
+    },
+    {
+     "@type": "Person",
+     "name": "Rokibul Islam Rayhan",
+     "roleName": "Cinematography"
+    }
+   ]
   }
  ]
 }
@@ -293,6 +332,12 @@
   .list li{padding:10px 0;border-bottom:1px solid var(--line);font-size:16px}
   .list li span{color:var(--muted);font-size:14px;display:block}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .sfilm{margin:34px 0 8px}
+  .sfilm-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px;margin-bottom:14px}
+  .sfilm-head h3.group{margin:0}
+  .sfilm-head .mono{font-size:12px;color:var(--muted);letter-spacing:.06em}
+  .sfilm video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+  .sfilm figcaption{margin-top:10px;font-size:12px;color:var(--muted);letter-spacing:.05em}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
   .card h3{font-size:22px;margin-bottom:10px}
   .card ul{margin:12px 0 0 18px;color:#d8d0c4}
@@ -995,6 +1040,13 @@ body.gh-off #ghost{display:none}
         <p style="margin-top:14px"><a href="https://www.youtube.com/@Soundhackerbd">YouTube</a> · <a href="https://www.facebook.com/soundhacker/">Facebook</a></p>
       </div>
     </div>
+    <figure class="sfilm">
+      <div class="sfilm-head"><h3 class="group">Inside the studio</h3><span class="mono">Sound Hacker · 67/4 Pioneer Road, Kakrail, Dhaka · Sat–Thu 11 am–11 pm</span></div>
+      <video controls preload="none" playsinline poster="studio-film-poster.jpg" width="1920" height="1080" aria-label="Inside the Sound Hacker studio, Dhaka">
+        <source src="studio-film.mp4" type="video/mp4">
+      </video>
+      <figcaption class="mono">Studio film · 0:59 · Cinematography: Rokibul Islam Rayhan · Photo Chemist</figcaption>
+    </figure>
     <h3 class="group">Artists & clients</h3>
     <div class="clients">
       <span>Tahsan Khan</span><span>Mahtim Shakib</span><span>Yousuf Ahmed Khan</span><span>Parsha Mahjabeen</span><span>Kona</span><span>Protic Hasan</span><span>Masha Islam</span><span>Shahrukh Kabir</span><span>Salma</span><span>Tasnim Anika</span><span>Ayesha Moushumi</span><span>Priyanka Gope</span><span>Abanti Sithi</span><span>F Minor</span><span>Payel Tripura</span><span>Poni Chakma</span><span>Tisa Dewan</span><span>Zico Marma</span><span>Dharmaraj</span><span>Naim Imran Sharot</span><span>Syed Real</span><span>Shapla Paul</span><span>Sahil Sanjan</span><span>Azreen Kamal</span><span>Dimple Biscuitwala</span><span>Martin Hadsa</span><span>Unilever</span><span>LUX</span><span>Embassy of Japan</span><span>Plan International</span><span>Save the Children</span><span>ActionAid</span><span>OBR</span>
